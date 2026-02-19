@@ -1,0 +1,76 @@
+:root {
+    --primary-color: #ffe115;
+}
+
+/* Slider */
+.swiper-inner {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.sw-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 0;
+}
+
+.op-7 {
+    opacity: 0.6;
+}
+
+.sw-caption {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    color: #fff;
+}
+
+.subtitle {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-color, #ffe115);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.slider-title {
+    font-size: 60px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+    color: #fff !important;
+}
+
+.slider-teaser {
+    font-size: 18px;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    color: #fff !important;
+}
+
+.btn-main {
+    background: var(--primary-color, #ffcc00);
+    color: #111;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.btn-main:hover {
+    background: #fff;
+    color: #111;
+}
