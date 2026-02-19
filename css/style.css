@@ -525,14 +525,13 @@ header .navbar {
 
 header .logo {
 	float: left;
-	margin-top: 8px;
 	position: relative;
 }
 
 header .logo img {
 	z-index: 3;
 	position: relative;
-	max-width: 150px;
+	max-width: 250px;
 	height: auto;
 }
 
