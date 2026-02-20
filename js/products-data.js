@@ -272,7 +272,7 @@ var productsData = {
     //        specs: { "Capacity": "1t - 50t", "Display": "Digital" }
     //    },
     "jack": {
-        name: "Jack",
+        name: "Rack Jack",
         category: "Material Handling",
         description: "Mechanical rack jack (railway jack).",
         images: ["images/original_products/rack_jack.jpg"],
