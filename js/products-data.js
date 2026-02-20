@@ -275,7 +275,7 @@ var productsData = {
         name: "Rack Jack",
         category: "Material Handling",
         description: "Mechanical rack jack (railway jack).",
-        images: ["images/original_products/rack_jack.jpg"],
+        images: ["images/original_products/Rack_jack.jpg"],
         specs: { "Capacity": "3t - 20t", "Type": "Mechanical" }
     },
     //    "spring-balancer": {
