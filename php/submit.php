@@ -3,8 +3,8 @@
 
 // specify your email here
 
-$to = 'email@example.com';
-
+$to = 'enquiry@onshoretechnical.com.sa';
+//$to = 'muba4shir@gmail.com';
 
 
 	// Assigning data from $_POST array to variables
@@ -15,7 +15,7 @@ $to = 'email@example.com';
     if (isset($_POST['message'])) { $message = $_POST['message']; }
 	
 	// Construct subject of the email
-	$subject = 'Medikal Contact Iquery ' . $name;
+	$subject = 'Contact Inquiry: ' . $name;
 
 	// Construct email body
 	$body_message .= 'Name: ' . $name . "\r\n";
@@ -25,7 +25,7 @@ $to = 'email@example.com';
 	$body_message .= 'Message: ' . $message . "\r\n";
 
 	// Construct headers of the message
-	$headers = 'From: ' . $from . "\r\n";
+	$headers = 'From: info@onshoretechnical.com.sa' . "\r\n";
 	$headers .= 'Reply-To: ' . $from . "\r\n";
 
 	$mail_sent = mail($to, $subject, $body_message, $headers);
