@@ -42,13 +42,13 @@ var productsData = {
         images: ["images/original_products/spark_proof_lever_hoist.jpg"],
         specs: { "Capacity": "0.75t - 6t", "Safety": "Spark Proof" }
     },
-    //    "electrical-chain-hoist": {
-    //        name: "Electrical Chain Hoist",
-    //        category: "Hoists",
-    //        description: "High-performance electric chain hoist for industrial use.",
-    //        images: ["images/products/electrical-chain-hoist.png"],
-    //        specs: { "Capacity": "0.5t - 5t", "Power": "3-Phase" }
-    //    },
+    "electrical-chain-hoist": {
+        name: "Electrical Chain Hoist",
+        category: "Hoists",
+        description: "High-performance electric chain hoist for industrial use.",
+        images: ["images/original_products/electrical_chain_hoist.jpg"],
+        specs: { "Capacity": "0.5t - 5t", "Power": "3-Phase" }
+    },
     "low-headroom-electric-chain-hoist": {
         name: "Low Head Room Electric Chain Hoist",
         category: "Hoists",
@@ -224,7 +224,7 @@ var productsData = {
         name: "Bow Shackle EP2130",
         category: "Shackles",
         description: "High-quality bow shackle for lifting and rigging applications.",
-        images: ["images/original_products/D_shackle_EP210.jpg"], // Placeholder image
+        images: ["images/original_products/bow_shackle_EP2130.jpg"], // Placeholder image
         specs: { "Safety Factor": "6:1", "Material": "Alloy Steel" }
     },
     "bow-shackle-ep209": {
