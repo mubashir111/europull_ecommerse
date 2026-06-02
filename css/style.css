@@ -889,13 +889,23 @@ header .is-sticky .sticky .nav .dropdown.megamenu .dropdown-menu {
 	font-size: 20px;
 }
 
+.nav-right .navbar-right {
+	display: flex;
+	align-items: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
 .nav-right .navbar-right li {
-	margin: 0px;
+	display: flex;
+	align-items: center;
+	margin: 0 5px;
 }
 
 .nav-right {
 	float: right;
-	margin-top: 15px;
+	/* margin-top: 15px; */
 	position: relative;
 }
 
@@ -1171,6 +1181,27 @@ header .user-basket span {
 	width: 100%;
 	margin: 5px 0;
 	font-size: 12px;
+}
+
+.user-basket>a {
+	position: relative;
+}
+
+.quote-basket-count {
+	position: absolute !important;
+	top: -6px;
+	right: -12px;
+	background: #ffe115;
+	color: #2d3a4b;
+	border-radius: 50%;
+	width: 16px !important;
+	height: 16px;
+	font-size: 10px !important;
+	line-height: 16px !important;
+	text-align: center;
+	font-weight: 700;
+	margin: 0 !important;
+	display: block !important;
 }
 
 header .user-basket .cart-img a {
@@ -5329,9 +5360,45 @@ main {
 	color: #333;
 }
 
+.qty-control .btn {
+	padding: 0;
+	width: 25px;
+	height: 25px;
+	line-height: 23px;
+	text-align: center;
+	background: #f8f8f8;
+	border: 1px solid #ddd;
+	color: #333;
+	font-size: 14px;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 0;
+	transition: all 0.2s;
+}
+
+.qty-control .btn:hover {
+	background: #2d3a4b;
+	color: #fff;
+	border-color: #2d3a4b;
+}
+
+.qty-control input {
+	width: 40px;
+	height: 25px;
+	text-align: center;
+	border: 1px solid #ddd;
+	border-left: none;
+	border-right: none;
+	font-size: 12px;
+	padding: 0;
+	border-radius: 0;
+	background: #fff;
+}
+
 .cart-item-qty {
 	font-size: 12px;
 	color: #999;
+	margin-top: 5px;
 }
 
 .remove-from-cart-btn {
@@ -5434,4 +5501,4 @@ main {
 
 #quote-form .col-xs-8 {
 	padding-left: 5px;
-}
+}.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }

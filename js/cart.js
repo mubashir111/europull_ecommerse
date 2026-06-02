@@ -7,6 +7,8 @@
 var QuoteCart = (function ($) {
     "use strict";
 
+    var REQUEST_QUOTE_URL = 'https://onshore.tbo365.cloud/api/method/onshore.api.create_request_quote';
+    var REQUEST_QUOTE_AUTH = 'token9897e6ee3838b6c:06d7193075244d6';
     var STORAGE_KEY = 'europull_quote_cart';
     var cart = [];
 
@@ -291,8 +293,8 @@ var QuoteCart = (function ($) {
                                         </select>
                                     </div>
                                     <div class="col-md-6 mb-3" style="margin-bottom: 15px;">
-                                        <label style="display: block; font-weight: 600; margin-bottom: 5px; color: #555;">District</label>
-                                        <input type="text" name="district" placeholder="" style="width: 100%; border: 1px solid #ddd; padding: 10px; border-radius: 3px;" class="form-control">
+                                        <label style="display: block; font-weight: 600; margin-bottom: 5px; color: #555;">City</label>
+                                        <input type="text" name="city" placeholder="" style="width: 100%; border: 1px solid #ddd; padding: 10px; border-radius: 3px;" class="form-control">
                                     </div>
                                     <div class="col-md-6 mb-3" style="margin-bottom: 15px;">
                                         <label style="display: block; font-weight: 600; margin-bottom: 5px; color: #555;">Mobile Number *</label>
@@ -618,7 +620,11 @@ var QuoteCart = (function ($) {
                     <a href="${item.url}"><img src="${item.image}" alt="${item.name}"></a>
                     <div class="cart-item-details">
                         <h5><a href="${item.url}">${item.name}</a></h5>
-                        <div class="cart-item-qty">Qty: ${item.qty}</div>
+                        <div class="qty-control">
+                            <button type="button" class="btn btn-xs btn-default update-qty" data-id="${item.id}" data-action="decrease">-</button>
+                            <input type="text" value="${item.qty}" readonly>
+                            <button type="button" class="btn btn-xs btn-default update-qty" data-id="${item.id}" data-action="increase">+</button>
+                        </div>
                     </div>
                     <span class="remove-from-cart-btn" data-id="${item.id}" title="Remove"><i class="icon-close"></i></span>
                 </div>
@@ -733,30 +739,63 @@ var QuoteCart = (function ($) {
 
     function bindEvents() {
 
-        // Handle Modal Form Submission
-        $('#quote-form-modal').on('submit', function (e) {
+        // Handle Modal and Full Page Form Submission
+        $('#quote-form-modal, #quote-form').on('submit', function (e) {
             e.preventDefault();
 
-            var $btn = $(this).find('button[type="submit"]');
-            var originalText = $btn.text();
-            $btn.text('Submitting...').prop('disabled', true);
+            var $form = $(this);
+            var $btn = $form.find('button[type="submit"]');
 
-            // Collect form data
-            var formData = $(this).serialize();
+            if (cart.length === 0) {
+                alert('Your quote basket is empty.');
+                return;
+            }
 
-            // Simulate AJAX call
-            setTimeout(function () {
-                alert('Thank you! Your quote request has been submitted successfully.');
-                $('#quoteRequestModal').modal('hide');
+            var payload = {
+                full_name: ($form.find('[name="name"]').val() || '').trim(),
+                email: ($form.find('[name="email"]').val() || '').trim(),
+                mobile_number: ($form.find('[name="mobile"]').val() || '').trim(),
+                mobile_country_code: $form.find('[name="country_code"] option:selected').text().trim(),
+                country: ($form.find('[name="country"]').val() || '').trim(),
+                company_name: ($form.find('[name="company"]').val() || '').trim(),
+                city: ($form.find('[name="city"]').val() || '').trim(),
+                message: ($form.find('[name="message"]').val() || '').trim(),
+                items: cart.map(function (item) {
+                    return {
+                        item_code: item.id,
+                        item_name: item.name,
+                        brand: 'Europull', // Default brand for Europull products
+                        qty: item.qty
+                    };
+                })
+            };
 
-                // Clear cart after successful submission
-                cart = [];
-                saveCart();
+            $btn.text('Sending...').prop('disabled', true);
 
-                $btn.text(originalText).prop('disabled', false);
-            }, 1000);
+            $.ajax({
+                url: REQUEST_QUOTE_URL,
+                method: 'POST',
+                contentType: 'application/json',
+                headers: {
+                    Authorization: REQUEST_QUOTE_AUTH
+                },
+                data: JSON.stringify(payload),
+                success: function (response) {
+                    $('#quoteRequestModal').modal('hide');
+                    alert('Thank you! Your quote request has been submitted successfully.');
 
-            console.log("Submitting quote:", formData);
+                    // Clear cart
+                    cart = [];
+                    saveCart();
+                },
+                error: function (err) {
+                    console.error('Quote request failed:', err);
+                    alert('Oops! Something went wrong while sending your request. Please try again or contact us directly.');
+                },
+                complete: function () {
+                    $btn.text('Submit Request').prop('disabled', false);
+                }
+            });
         });
 
         // Trigger Modal Open (Ensure cart data is populated)
