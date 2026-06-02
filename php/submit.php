@@ -3,7 +3,7 @@
 
 // specify your email here
 
-$to = 'enquiry@onshoretechnical.com.sa';
+$to = 'hr2@hydrotechglobal.com';
 //$to = 'muba4shir@gmail.com';
 
 
@@ -25,7 +25,7 @@ $to = 'enquiry@onshoretechnical.com.sa';
 	$body_message .= 'Message: ' . $message . "\r\n";
 
 	// Construct headers of the message
-	$headers = 'From: info@onshoretechnical.com.sa' . "\r\n";
+	$headers = 'From: info@europull.com' . "\r\n";
 	$headers .= 'Reply-To: ' . $from . "\r\n";
 
 	$mail_sent = mail($to, $subject, $body_message, $headers);
