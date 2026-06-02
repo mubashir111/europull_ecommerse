@@ -757,7 +757,7 @@ var QuoteCart = (function ($) {
                 mobile_number: ($form.find('[name="mobile"]').val() || '').trim(),
                 mobile_country_code: $form.find('[name="country_code"] option:selected').text().trim(),
                 country: ($form.find('[name="country"]').val() || '').trim(),
-                company_name: ($form.find('[name="company"]').val() || '').trim(),
+                company_name: (($form.find('[name="company"]').val() || '').trim() + ' (europull.com)').trim(),
                 city: ($form.find('[name="city"]').val() || '').trim(),
                 message: ($form.find('[name="message"]').val() || '').trim(),
                 items: cart.map(function (item) {
