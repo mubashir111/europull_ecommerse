@@ -155,7 +155,7 @@ $(document).ready(function ($) {
 		var pattern1 = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 		if (pattern1.test(input)) { return true; } else { return false; }
 	}
-	function proceed() {
+	window.proceed = function() {
 		var name = document.getElementById("name");
 		var email = document.getElementById("email");
 		var company = document.getElementById("company");
@@ -170,8 +170,8 @@ $(document).ready(function ($) {
 			email.className = 'error';
 			return false;
 		}
-		else if (checkmail(email.value) == false) {
-			alert('Please provide a valid email address.');
+		else if (checkmail(email.value.trim()) == false) {
+			alert('Please provide a valid email address (make sure there are no trailing spaces).');
 			return false;
 		}
 		else if (company.value == "") {

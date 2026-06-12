@@ -3,8 +3,7 @@
 
 // specify your email here
 
-$to = 'hr2@hydrotechglobal.com';
-//$to = 'muba4shir@gmail.com';
+$to = 'info@europull.com';
 
 
 	// Assigning data from $_POST array to variables
