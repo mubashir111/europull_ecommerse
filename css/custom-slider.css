@@ -1,5 +1,5 @@
 :root {
-    --primary-color: #ffe115;
+    --primary-color: #a31d20;
 }
 
 /* Slider */
@@ -39,7 +39,7 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--primary-color, #ffe115);
+    color: var(--primary-color, #a31d20);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -61,8 +61,8 @@
 }
 
 .btn-main {
-    background: var(--primary-color, #ffcc00);
-    color: #111;
+    background: var(--primary-color, #a31d20);
+    color: #fff;
     padding: 12px 30px;
     border-radius: 5px;
     font-weight: 700;
