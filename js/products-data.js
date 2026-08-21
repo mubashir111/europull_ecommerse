@@ -201,7 +201,7 @@ var productsData = {
         name: "Horizontal Plate Lifting Clamp",
         category: "Clamps",
         description: "Heavy duty clamp for horizontal plate lifting.",
-        images: ["images/original_products/horizontal_plate_lifting_clamp.jpg"],
+        images: ["images/original_products/Horizontal Plate Lifting Clamp.png"],
         specs: { "Capacity": "1.5t - 10t", "Jaw Opening": "0 - 100mm" }
     },
     //    "permanent-magnetic-lifter": {
@@ -215,7 +215,7 @@ var productsData = {
         name: "Horizontal Pipe Lifting Clamp",
         category: "Clamps",
         description: "Specialized clamp for lifting pipes horizontally.",
-        images: ["images/original_products/Horizontal_pipe_lifting_clamp.jpg"],
+        images: ["images/original_products/Horizontal Pipe Lifting Clamp.png"],
         specs: { "Capacity": "1.5t - 16t", "Type": "Pipe Clamp" }
     },
 
@@ -275,7 +275,7 @@ var productsData = {
         name: "Rack Jack",
         category: "Material Handling",
         description: "Mechanical rack jack (railway jack).",
-        images: ["images/original_products/Rack_jack.jpg"],
+        images: ["images/original_products/Rack Jack.png"],
         specs: { "Capacity": "3t - 20t", "Type": "Mechanical" }
     },
     //    "spring-balancer": {
@@ -289,7 +289,7 @@ var productsData = {
         name: "Snatch Block",
         category: "Material Handling",
         description: "Snatch block with hook/shackle.",
-        images: ["images/original_products/snatch_block.jpg"],
+        images: ["images/original_products/Snatch Block.png"],
         specs: { "Capacity": "2t - 50t", "Sheave": "Single" }
     },
     //    "heavy-duty-snatch-block": {
