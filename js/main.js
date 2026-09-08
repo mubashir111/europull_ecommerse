@@ -244,5 +244,19 @@ $(document).ready(function ($) {
 		});
 	});
 
-
 });
+
+/* Saudi Landing Page FAQ Toggle */
+window.toggleSaudiFaq = function (element) {
+	var item = $(element).closest('.saudi-faq-item');
+	var answer = item.find('.saudi-faq-answer');
+	if (item.hasClass('active')) {
+		item.removeClass('active');
+		answer.css('max-height', '0').css('padding', '0 22px');
+	} else {
+		$('.saudi-faq-item').removeClass('active').find('.saudi-faq-answer').css('max-height', '0').css('padding', '0 22px');
+		item.addClass('active');
+		answer.css('max-height', '500px').css('padding', '18px 22px');
+	}
+};
+
