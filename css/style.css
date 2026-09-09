@@ -4067,6 +4067,11 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	z-index: 1;
 }
 
+.sub-bnr .position-center-center {
+	top: calc(50% + 45px);
+	width: 100%;
+}
+
 .sub-bnr:before {
 	content: "";
 	position: absolute;
@@ -5842,5 +5847,60 @@ main {
     background: #ffffff;
     border-top: none;
 }
+
+/* Product Range & Standards Section */
+.product-range-tag {
+    display: inline-block;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #2d3a4b;
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.product-range-tag:hover {
+    background: #2d3a4b;
+    color: #ffe115;
+    border-color: #2d3a4b;
+}
+
+.standards-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #ffe115;
+    border-radius: 4px;
+    padding: 30px 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+}
+
+.standards-badge-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2d3a4b;
+    transition: all 0.2s ease;
+}
+
+.standards-badge-item:hover {
+    border-color: #2d3a4b;
+    background: #ffffff;
+}
+
+.standards-badge-item i {
+    color: #28a745;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
 
 
