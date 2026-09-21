@@ -6,7 +6,9 @@ $(document).ready(function ($) {
 	/*-----------------------------------------------------------------------------------*/
 	/*		STICKY NAVIGATION
 	/*-----------------------------------------------------------------------------------*/
-	$(".sticky").sticky({ topSpacing: 0 });
+	if ($.fn.sticky) {
+		$(".sticky").sticky({ topSpacing: 0 });
+	}
 	/*-----------------------------------------------------------------------------------*/
 	/* 	LOADER
 	/*-----------------------------------------------------------------------------------*/
@@ -14,15 +16,19 @@ $(document).ready(function ($) {
 	/*-----------------------------------------------------------------------------------*/
 	/*  FULL SCREEN
 	/*-----------------------------------------------------------------------------------*/
-	$('.full-screen').superslides({});
+	if ($.fn.superslides) {
+		$('.full-screen').superslides({});
+	}
 	/*-----------------------------------------------------------------------------------*/
 	/*    Parallax
 	/*-----------------------------------------------------------------------------------*/
-	jQuery.stellar({
-		horizontalScrolling: false,
-		scrollProperty: 'scroll',
-		positionProperty: 'position',
-	});
+	if (jQuery.stellar) {
+		jQuery.stellar({
+			horizontalScrolling: false,
+			scrollProperty: 'scroll',
+			positionProperty: 'position',
+		});
+	}
 
 	/*-----------------------------------------------------------------------------------*/
 	/* 		Parallax
@@ -35,109 +41,119 @@ $(document).ready(function ($) {
 	/*-----------------------------------------------------------------------------------*/
 	/* 		Parallax
 	/*-----------------------------------------------------------------------------------*/
-	$('.images-slider').flexslider({
-		animation: "fade",
-		controlNav: "thumbnails"
-	});
+	if ($.fn.flexslider) {
+		$('.images-slider').flexslider({
+			animation: "fade",
+			controlNav: "thumbnails"
+		});
+	}
 	/*-----------------------------------------------------------------------------------*/
 	/* 	GALLERY SLIDER
 	/*-----------------------------------------------------------------------------------*/
-	$('.block-slide').owlCarousel({
-		loop: true,
-		margin: 30,
-		nav: true,
-		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-		responsive: {
-			0: {
-				items: 1
-			},
-			600: {
-				items: 2
-			},
-			1000: {
-				items: 4
+	if ($.fn.owlCarousel) {
+		$('.block-slide').owlCarousel({
+			loop: true,
+			margin: 30,
+			nav: true,
+			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 4
+				}
 			}
-		}
-	});
+		});
+	}
 	/*-----------------------------------------------------------------------------------*/
 	/* 	SLIDER REVOLUTION
 	/*-----------------------------------------------------------------------------------*/
-	jQuery('.tp-banner').show().revolution({
-		dottedOverlay: "none",
-		delay: 10000,
-		startwidth: 1170,
-		startheight: 900,
-		navigationType: "",
-		navigationArrows: "solo",
-		navigationStyle: "preview1",
-		parallax: "mouse",
-		parallaxBgFreeze: "on",
-		parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
-		keyboardNavigation: "on",
-		shadow: 0,
-		fullWidth: "on",
-		fullScreen: "off",
-		shuffle: "off",
-		autoHeight: "off",
-		forceFullWidth: "off",
-		fullScreenOffsetContainer: ""
-	});
+	if ($.fn.revolution && jQuery('.tp-banner').length) {
+		jQuery('.tp-banner').show().revolution({
+			dottedOverlay: "none",
+			delay: 10000,
+			startwidth: 1170,
+			startheight: 900,
+			navigationType: "",
+			navigationArrows: "solo",
+			navigationStyle: "preview1",
+			parallax: "mouse",
+			parallaxBgFreeze: "on",
+			parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+			keyboardNavigation: "on",
+			shadow: 0,
+			fullWidth: "on",
+			fullScreen: "off",
+			shuffle: "off",
+			autoHeight: "off",
+			forceFullWidth: "off",
+			fullScreenOffsetContainer: ""
+		});
+	}
 
 	/*-----------------------------------------------------------------------------------*/
 	/* 	TESTIMONIAL SLIDER
 	/*-----------------------------------------------------------------------------------*/
-	$(".single-slide").owlCarousel({
-		items: 1,
-		autoplay: true,
-		loop: true,
-		autoplayTimeout: 5000,
-		autoplayHoverPause: true,
-		singleItem: true,
-		navigation: true,
-		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-		pagination: true,
-		animateOut: 'fadeOut'
-	});
-	$('.item-slide').owlCarousel({
-		loop: true,
-		margin: 30,
-		nav: false,
-		navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-		responsive: {
-			0: {
-				items: 1
-			},
-			400: {
-				items: 2
-			},
-			900: {
-				items: 3
-			},
-			1200: {
-				items: 4
+	if ($.fn.owlCarousel) {
+		$(".single-slide").owlCarousel({
+			items: 1,
+			autoplay: true,
+			loop: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
+			singleItem: true,
+			navigation: true,
+			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+			pagination: true,
+			animateOut: 'fadeOut'
+		});
+		$('.item-slide').owlCarousel({
+			loop: true,
+			margin: 30,
+			nav: false,
+			navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+			responsive: {
+				0: {
+					items: 1
+				},
+				400: {
+					items: 2
+				},
+				900: {
+					items: 3
+				},
+				1200: {
+					items: 4
+				}
 			}
-		}
-	});
+		});
+	}
 	/* ------------------------------------------------------------------------ 
 	   SEARCH OVERLAP
 	------------------------------------------------------------------------ */
 	$(window).load(function () {
-		$('#shop-thumb').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			itemWidth: 210,
-			itemMargin: 5,
-			asNavFor: '#slider-shop'
-		});
-		$('#slider-shop').flexslider({
-			animation: "slide",
-			controlNav: false,
-			animationLoop: false,
-			slideshow: false,
-			sync: "#shop-thumb"
-		});
+		if ($.fn.flexslider) {
+			$('#shop-thumb').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				itemWidth: 210,
+				itemMargin: 5,
+				asNavFor: '#slider-shop'
+			});
+			$('#slider-shop').flexslider({
+				animation: "slide",
+				controlNav: false,
+				animationLoop: false,
+				slideshow: false,
+				sync: "#shop-thumb"
+			});
+		}
 	});
 	/* ------------------------------------------------------------------------ 
 	   SEARCH OVERLAP
@@ -208,20 +224,24 @@ $(document).ready(function ($) {
 	/*-----------------------------------------------------------------------------------
 		Animated progress bars
 	/*-----------------------------------------------------------------------------------*/
-	$('.progress-bars').waypoint(function () {
-		$('.progress').each(function () {
-			$(this).find('.progress-bar').animate({
-				width: $(this).attr('data-percent')
-			}, 100);
-		});
-	},
-		{
-			offset: '100%',
-			triggerOnce: true
-		});
+	if ($.fn.waypoint) {
+		$('.progress-bars').waypoint(function () {
+			$('.progress').each(function () {
+				$(this).find('.progress-bar').animate({
+					width: $(this).attr('data-percent')
+				}, 100);
+			});
+		},
+			{
+				offset: '100%',
+				triggerOnce: true
+			});
+	}
 
 	$(function () {
-		$('[data-toggle="tooltip"]').tooltip()
+		if ($.fn.tooltip) {
+			$('[data-toggle="tooltip"]').tooltip();
+		}
 	})
 
 

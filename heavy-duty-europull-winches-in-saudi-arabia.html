@@ -88,16 +88,67 @@
   </script>
 
   <style>
-    /* Heading and sub-banner synchronization */
-    .sub-bnr h1 {
+    /* Page Sub-banner image override & Frosted Glass Card */
+    .sub-bnr {
+      background-image: url('images/heavy-duty-europull-winches.png') !important;
+      background-position: center center !important;
+      background-size: cover !important;
+      min-height: 480px;
+    }
+    .sub-bnr:before {
+      background: rgba(0, 0, 0, 0.18) !important;
+    }
+    .winch-banner-glass-card {
+      background: rgba(18, 25, 35, 0.82);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 30px 40px 24px;
+      max-width: 820px;
+      margin: 0 auto;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    }
+    .winch-banner-glass-card h1 {
       font-size: 26px;
-      color: #fff;
-      font-weight: bold;
-      letter-spacing: 4px;
-      margin-top: 0px;
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-top: 0;
+      margin-bottom: 12px;
       text-transform: uppercase;
       line-height: 36px;
     }
+    .winch-banner-glass-card p {
+      color: #e2e8f0;
+      font-size: 14px;
+      line-height: 22px;
+      margin: 0 auto 18px;
+      max-width: 640px;
+      letter-spacing: 0.2px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .winch-banner-glass-card .breadcrumb {
+      margin-bottom: 0;
+      padding: 6px 18px;
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .winch-banner-glass-card .breadcrumb li {
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .winch-banner-glass-card .breadcrumb li a {
+      color: #f7a933;
+    }
+    .winch-banner-glass-card .breadcrumb li.active {
+      color: #ffffff;
+    }
+    /* Heading and sub-banner synchronization */
     .heading h2 {
       font-weight: bold;
       color: #2d3a4b;
@@ -118,7 +169,19 @@
     }
     @media (max-width: 767px) {
       .heading span { width: 95%; }
-      .sub-bnr h1 { font-size: 20px; letter-spacing: 2px; }
+      .winch-banner-glass-card {
+        padding: 20px 18px 16px;
+        margin: 0 10px;
+      }
+      .winch-banner-glass-card h1 {
+        font-size: 19px;
+        line-height: 26px;
+        letter-spacing: 1.5px;
+      }
+      .winch-banner-glass-card p {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
 
     /* Jobsite photos */
@@ -503,16 +566,18 @@
     </header>
 
     <!--======= SIGNATURE SUB BANNER (EUROPULL THEME) =========-->
-    <section class="sub-bnr" data-stellar-background-ratio="0.5">
+    <section class="sub-bnr" style="background-image: url('images/heavy-duty-europull-winches.png'); background-position: center center;">
       <div class="position-center-center">
         <div class="container">
-          <h1>Heavy-Duty Hydraulic, Electric &amp; Manual Winches</h1>
-          <p>Since 1940, Europull Hebentechnik UK Ltd has been synonymous with uncompromising strength in pulling, lifting, and recovery</p>
-          <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li class="active">Industrial Winches</li>
-          </ol>
+          <div class="winch-banner-glass-card">
+            <h1>Heavy-Duty Hydraulic, Electric &amp; Manual Winches</h1>
+            <p>Since 1940, Europull Hebentechnik UK Ltd has been synonymous with uncompromising strength in pulling, lifting, and recovery</p>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="products.html">Products</a></li>
+              <li class="active">Industrial Winches</li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
@@ -1079,7 +1144,7 @@
         <div class="container">
 
           <div class="heading text-center">
-            <h2>Technical Specifications Matrix</h2>
+            <h2>Technical Specifications</h2>
             <span>Compare rated capacities, power units, gear architectures, and braking systems across all models</span>
           </div>
 
@@ -1094,7 +1159,6 @@
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Power / Motor</th>
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Braking System</th>
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Ingress</th>
-                  <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -1106,7 +1170,6 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwv-10000" data-name="Europull HWV 10000 Hydraulic Winch" data-image="images/Onshore/Product Images/HWV-10000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWV 12000</td>
@@ -1116,7 +1179,6 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwv-12000" data-name="Europull HWV 12000 Hydraulic Winch" data-image="images/Onshore/Product Images/HWV-12000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWV 15000</td>
@@ -1126,7 +1188,6 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwv-15000" data-name="Europull HWV 15000 Hydraulic Winch" data-image="images/Onshore/Product Images/HWV-15000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 100</td>
@@ -1136,7 +1197,6 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwe-100" data-name="Europull HWE 100 Industrial Hydraulic Winch" data-image="images/Onshore/Product Images/HWE-100.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 150</td>
@@ -1146,7 +1206,6 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwe-150" data-name="Europull HWE 150 Industrial Hydraulic Winch" data-image="images/Onshore/Product Images/HWE-150.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 200</td>
@@ -1156,7 +1215,6 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwe-200" data-name="Europull HWE 200 Industrial Hydraulic Winch" data-image="images/Onshore/Product Images/HWE-200.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr style="background: #fefce8;">
                   <td style="padding: 10px 14px; font-weight: bold; color: #b45309;">HWE 300 (Flagship)</td>
@@ -1166,7 +1224,6 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="hwe-300" data-name="Europull HWE 300 Industrial Hydraulic Winch" data-image="images/Onshore/Product Images/HWE-300.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 12500</td>
@@ -1176,7 +1233,6 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="ewb-12500" data-name="Europull EWB 12500 Electric Winch" data-image="images/Onshore/Product Images/EWB12500.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 18000</td>
@@ -1186,7 +1242,6 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="ewb-18000" data-name="Europull EWB 18000 Electric Winch" data-image="images/Onshore/Product Images/EWB18000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 20000</td>
@@ -1196,7 +1251,6 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="ewb-20000" data-name="Europull EWB 20000 Electric Winch" data-image="images/Onshore/Product Images/EWB20000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr style="background: #fefce8;">
                   <td style="padding: 10px 14px; font-weight: bold; color: #b45309;">EWB 25000 (Top Electric)</td>
@@ -1206,7 +1260,6 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="ewb-25000" data-name="Europull EWB 25000 Electric Winch" data-image="images/Onshore/Product Images/EWB25000.png" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">Wire Rope Winch (Tirfor)</td>
@@ -1216,7 +1269,6 @@
                   <td style="padding: 10px 14px;">Manual Telescopic Lever</td>
                   <td style="padding: 10px 14px;">Self-Locking Dual Jaws</td>
                   <td style="padding: 10px 14px;">Corrosion Proof</td>
-                  <td style="padding: 10px 14px;"><a href="javascript:void(0);" class="add-to-quote" data-id="wire-rope-winch" data-name="Europull Manual Wire Rope Winch (Tirfor)" data-image="images/original_products/wire-rope-winch.jpg" data-url="heavy-duty-europull-winches-in-saudi-arabia.html" style="font-weight: 700; color: #f7a933;">+ Add Quote</a></td>
                 </tr>
               </tbody>
             </table>

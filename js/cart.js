@@ -727,6 +727,9 @@ var QuoteCart = (function ($) {
     }
 
     function openSidebar() {
+        if ($('#cart-sidebar').length === 0) {
+            injectCartSidebar();
+        }
         renderCartSidebar();
         $('#cart-sidebar').addClass('active');
         $('.cart-overlay').addClass('active');
@@ -876,6 +879,13 @@ var QuoteCart = (function ($) {
                 qty: 1
             };
             addToCart(product);
+
+            // Visual button feedback
+            var origHtml = $btn.html();
+            $btn.html('&#10003; Added');
+            setTimeout(function () {
+                $btn.html(origHtml);
+            }, 1800);
         });
 
         // Open Sidebar via Navbar Icon
@@ -899,10 +909,17 @@ var QuoteCart = (function ($) {
 
 })(jQuery);
 
-$(document).ready(function () {
-    QuoteCart.init();
-    // If we are on the quote cart page, render it
-    if ($('#quote-cart-body').length > 0) {
-        QuoteCart.renderCartPage();
+(function () {
+    function autoInit() {
+        QuoteCart.init();
+        if ($('#quote-cart-body').length > 0) {
+            QuoteCart.renderCartPage();
+        }
     }
-});
+
+    if (document.readyState === 'loading') {
+        $(document).ready(autoInit);
+    } else {
+        autoInit();
+    }
+})();
