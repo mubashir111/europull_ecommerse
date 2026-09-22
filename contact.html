@@ -63,9 +63,8 @@
     .contact-hero-bnr {
       background: url('images/slider/slider7.webp') center center no-repeat;
       background-size: cover;
-      min-height: 250px;
       position: relative;
-      padding: 35px 0 115px;
+      padding: 60px 0 160px;
     }
     .contact-hero-bnr:before {
       content: "";
@@ -74,7 +73,19 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.86) 100%);
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.88) 100%);
+    }
+    .contact-hero-title {
+      color: #ffffff;
+      font-size: 42px;
+      font-weight: 800;
+      margin: 0 0 16px 0;
+      letter-spacing: -0.5px;
+      position: relative;
+      z-index: 2;
+    }
+    .contact-hero-title span {
+      color: #f59e0b;
     }
     .contact-breadcrumb {
       position: relative;
@@ -102,24 +113,63 @@
       color: #94a3b8;
     }
 
-    /* Global Hubs Overlapping Cards */
+    /* Global Hubs Overlapping Cards - Top Half In Hero, Bottom Half In Content */
     .contact-hubs-wrap {
       position: relative;
-      z-index: 5;
-      margin-top: -85px;
-      margin-bottom: 75px;
+      z-index: 10;
+      margin-top: -110px;
+      margin-bottom: 60px;
+    }
+    @media (max-width: 767px) {
+      .contact-hero-bnr {
+        min-height: 240px;
+        padding: 30px 0 80px;
+      }
+      .contact-hubs-wrap {
+        margin-top: -60px;
+        margin-bottom: 40px;
+      }
+    }
+    .contact-hubs-wrap .row {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+    .contact-hubs-wrap .row:before,
+    .contact-hubs-wrap .row:after {
+      display: none;
+    }
+    .contact-hubs-wrap .row > [class*="col-"] {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 20px;
     }
     .hub-card {
       background: #ffffff;
       border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 32px 20px 28px;
+      border-radius: 14px;
+      padding: 34px 22px 30px;
       text-align: center;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
       transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-      height: calc(100% - 20px);
-      margin-bottom: 20px;
+      width: 100%;
+      height: 100%;
+      min-height: 300px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
       flex-direction: column;
       align-items: center;
     }
@@ -140,6 +190,7 @@
       font-size: 22px;
       margin-bottom: 18px;
       box-shadow: 0 8px 18px rgba(245, 158, 11, 0.3);
+      flex-shrink: 0;
     }
     .hub-title {
       font-size: 17px;
@@ -148,6 +199,11 @@
       margin: 0 0 10px 0;
       line-height: 24px;
       letter-spacing: 0.2px;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
     }
     .hub-company {
       font-size: 13px;
@@ -467,6 +523,7 @@
       <!-- Sub Banner Hero -->
       <section class="contact-hero-bnr">
         <div class="container">
+          <h1 class="contact-hero-title">Request A <span>Quote</span></h1>
           <div class="contact-breadcrumb">
             <a href="index.html"><i class="fa fa-home"></i> Home</a>
             <i class="fa fa-long-arrow-right"></i>
