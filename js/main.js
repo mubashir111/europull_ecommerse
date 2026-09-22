@@ -33,10 +33,29 @@ $(document).ready(function ($) {
 	/*-----------------------------------------------------------------------------------*/
 	/* 		Parallax
 	/*-----------------------------------------------------------------------------------*/
+	/* 		Dropdown Menu (Desktop Hover & Mobile Toggle)
+	/*-----------------------------------------------------------------------------------*/
 	$('ul.nav li.dropdown').hover(function () {
-		$(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(400);
+		if ($(window).width() > 767) {
+			$(this).find('.dropdown-menu').stop(true, true).delay(50).fadeIn(300);
+		}
 	}, function () {
-		$(this).find('.dropdown-menu').stop(true, true).delay(500).fadeOut(100);
+		if ($(window).width() > 767) {
+			$(this).find('.dropdown-menu').stop(true, true).delay(250).fadeOut(150);
+		}
+	});
+
+	// Mobile Dropdown Click Handling
+	$('ul.nav li.dropdown > a').on('click', function (e) {
+		if ($(window).width() <= 767) {
+			var $submenu = $(this).siblings('.dropdown-menu');
+			if ($submenu.length) {
+				if (!$submenu.is(':visible')) {
+					e.preventDefault();
+					$submenu.stop(true, true).slideDown(200);
+				}
+			}
+		}
 	});
 	/*-----------------------------------------------------------------------------------*/
 	/* 		Parallax

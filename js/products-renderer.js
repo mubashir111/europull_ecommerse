@@ -102,6 +102,23 @@ $(document).ready(function () {
             });
 
             containerDiv.append(row);
+
+            if (cat === 'Winches') {
+                var winchBanner = `
+                <div class="margin-top-30 margin-bottom-10">
+                    <div style="background: linear-gradient(135deg, #2d3a4b 0%, #1c2631 100%); border-radius: 6px; padding: 22px 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 15px; border-left: 4px solid #ffe115; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+                        <div>
+                            <h5 style="color: #ffffff; margin: 0 0 6px 0; font-weight: 700; font-size: 16px; letter-spacing: 0.5px;">Heavy-Duty Industrial Winches (Hydraulic, Electric &amp; Manual)</h5>
+                            <p style="margin: 0; color: #cbd5e1; font-size: 13px; line-height: 20px;">Explore the full Europull Hebentechnik winch portfolio, certified models (HWV, HWE, EWB series), and technical engineering specs.</p>
+                        </div>
+                        <a href="heavy-duty-europull-winches-in-saudi-arabia.html" class="btn btn-small" style="background: #ffe115; color: #2d3a4b; font-weight: 700; border-radius: 4px; padding: 10px 22px; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; border: none; white-space: nowrap;">
+                            View Heavy-Duty Winches &rarr;
+                        </a>
+                    </div>
+                </div>`;
+                containerDiv.append(winchBanner);
+            }
+
             section.append(containerDiv);
             container.append(section);
         });

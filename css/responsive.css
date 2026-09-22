@@ -930,7 +930,17 @@ header .navbar .nav .dropdown-menu {
 .ownmenu .nav .dropdown-menu {
 	margin-top: 0px;
 	min-width: 100%;
-	background: rgba(0,0,0,0.1);
+	background: #f8fafc;
+	border: 1px solid #edf2f7;
+	border-left: 3px solid #ffe115;
+	border-top: none;
+	border-radius: 0 0 4px 4px;
+	box-shadow: none;
+	padding: 5px 0;
+}
+.ownmenu .nav .dropdown-menu li a {
+	padding: 8px 15px 8px 25px;
+	font-size: 13px;
 }
 header .navbar .nav li {
 	width: 100%;

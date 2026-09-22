@@ -88,66 +88,177 @@
   </script>
 
   <style>
-    /* Page Sub-banner image override & Frosted Glass Card */
-    .sub-bnr {
-      background-image: url('images/heavy-duty-europull-winches.png') !important;
-      background-position: center center !important;
-      background-size: cover !important;
-      min-height: 480px;
+    /* Hero Banner Redesign (High-Duty Industrial Winches) */
+    .winch-hero-banner {
+      background: linear-gradient(135deg, #131c26 0%, #1e293b 50%, #111822 100%);
+      position: relative;
+      padding: 65px 0 55px;
+      overflow: hidden;
+      border-bottom: 3px solid #ffe115;
     }
-    .sub-bnr:before {
-      background: rgba(0, 0, 0, 0.18) !important;
+    .winch-hero-banner:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 75% 50%, rgba(255, 225, 21, 0.1) 0%, transparent 60%),
+                  radial-gradient(circle at 20% 20%, rgba(45, 58, 75, 0.6) 0%, transparent 70%);
+      pointer-events: none;
     }
-    .winch-banner-glass-card {
-      background: rgba(18, 25, 35, 0.82);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 8px;
-      padding: 30px 40px 24px;
-      max-width: 820px;
-      margin: 0 auto;
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    .winch-hero-row {
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 2;
     }
-    .winch-banner-glass-card h1 {
-      font-size: 26px;
-      color: #ffffff;
-      font-weight: 800;
-      letter-spacing: 3px;
-      margin-top: 0;
-      margin-bottom: 12px;
+    @media (max-width: 991px) {
+      .winch-hero-row {
+        display: block;
+      }
+      .winch-hero-col-right {
+        margin-top: 30px;
+        text-align: center;
+      }
+    }
+    .winch-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 225, 21, 0.12);
+      border: 1px solid rgba(255, 225, 21, 0.4);
+      color: #ffe115;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      line-height: 36px;
+      margin-bottom: 18px;
     }
-    .winch-banner-glass-card p {
-      color: #e2e8f0;
+    .winch-hero-badge .badge-dot {
+      width: 7px;
+      height: 7px;
+      background: #ffe115;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 8px;
+      box-shadow: 0 0 8px #ffe115;
+    }
+    .winch-hero-title {
+      color: #ffffff;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 44px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 0 0 14px 0;
+    }
+    .winch-hero-desc {
+      color: #cbd5e1;
       font-size: 14px;
-      line-height: 22px;
-      margin: 0 auto 18px;
-      max-width: 640px;
+      line-height: 24px;
       letter-spacing: 0.2px;
+      margin-bottom: 22px;
+      max-width: 600px;
       font-family: 'Montserrat', sans-serif;
     }
-    .winch-banner-glass-card .breadcrumb {
-      margin-bottom: 0;
-      padding: 6px 18px;
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+    .winch-hero-highlights {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 26px;
     }
-    .winch-banner-glass-card .breadcrumb li {
+    .hero-chip {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 4px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      letter-spacing: 0.3px;
+    }
+    .hero-chip i {
+      color: #ffe115;
+    }
+    .winch-hero-breadcrumb {
+      background: rgba(0, 0, 0, 0.35);
+      display: inline-block;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      margin: 0;
+    }
+    .winch-hero-breadcrumb li {
       font-size: 11px;
       letter-spacing: 1px;
       text-transform: uppercase;
       font-weight: 600;
+      color: #94a3b8;
     }
-    .winch-banner-glass-card .breadcrumb li a {
-      color: #f7a933;
+    .winch-hero-breadcrumb li a {
+      color: #ffe115;
     }
-    .winch-banner-glass-card .breadcrumb li.active {
+    .winch-hero-breadcrumb li.active {
       color: #ffffff;
     }
+    .winch-hero-visual {
+      position: relative;
+      padding: 10px;
+      display: inline-block;
+      max-width: 100%;
+    }
+    .winch-hero-glow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 225, 21, 0.16) 0%, rgba(45, 58, 75, 0.25) 50%, transparent 70%);
+      border-radius: 50%;
+      filter: blur(25px);
+      z-index: 1;
+      pointer-events: none;
+    }
+    .winch-hero-img {
+      position: relative;
+      z-index: 2;
+      max-height: 290px;
+      margin: 0 auto;
+      filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.65));
+      transition: transform 0.4s ease;
+    }
+    .winch-hero-img:hover {
+      transform: scale(1.03);
+    }
+    .winch-model-tag {
+      position: relative;
+      z-index: 2;
+      margin-top: 14px;
+      display: inline-block;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(255, 225, 21, 0.4);
+      padding: 6px 16px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .winch-model-tag .model-name {
+      color: #ffe115;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 1px;
+      margin-right: 8px;
+    }
+    .winch-model-tag .model-spec {
+      color: #cbd5e1;
+      font-size: 11px;
+    }
+
     /* Heading and sub-banner synchronization */
     .heading h2 {
       font-weight: bold;
@@ -169,19 +280,9 @@
     }
     @media (max-width: 767px) {
       .heading span { width: 95%; }
-      .winch-banner-glass-card {
-        padding: 20px 18px 16px;
-        margin: 0 10px;
-      }
-      .winch-banner-glass-card h1 {
-        font-size: 19px;
-        line-height: 26px;
-        letter-spacing: 1.5px;
-      }
-      .winch-banner-glass-card p {
-        font-size: 12px;
-        line-height: 18px;
-      }
+      .winch-hero-title { font-size: 24px; line-height: 32px; }
+      .winch-hero-banner { padding: 45px 0 40px; }
+      .winch-hero-img { max-height: 220px; }
     }
 
     /* Jobsite photos */
@@ -521,8 +622,12 @@
             <div class="collapse navbar-collapse" id="nav-open-btn">
               <ul class="nav">
                 <li> <a href="index.html">Home</a> </li>
-                <li> <a href="products.html">Products</a> </li>
-                <li class="active"> <a href="heavy-duty-europull-winches-in-saudi-arabia.html">Winches</a> </li>
+                <li class="dropdown active"> <a href="products.html">Products <i class="fa fa-angle-down" style="font-size: 11px; margin-left: 3px;"></i></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="products.html">All Products</a></li>
+                    <li class="active"><a href="heavy-duty-europull-winches-in-saudi-arabia.html">Heavy-Duty Winches</a></li>
+                  </ul>
+                </li>
                 <li> <a href="europull-lifting-equipment-in-saudi.html">Brands</a> </li>
                 <li> <a href="about-us_01.html">About</a> </li>
                 <li> <a href="blog.html">Blog</a> </li>
@@ -565,18 +670,47 @@
       </div>
     </header>
 
-    <!--======= SIGNATURE SUB BANNER (EUROPULL THEME) =========-->
-    <section class="sub-bnr" style="background-image: url('images/heavy-duty-europull-winches.png'); background-position: center center;">
-      <div class="position-center-center">
-        <div class="container">
-          <div class="winch-banner-glass-card">
-            <h1>Heavy-Duty Hydraulic, Electric &amp; Manual Winches</h1>
-            <p>Since 1940, Europull Hebentechnik UK Ltd has been synonymous with uncompromising strength in pulling, lifting, and recovery</p>
-            <ol class="breadcrumb">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="products.html">Products</a></li>
-              <li class="active">Industrial Winches</li>
-            </ol>
+    <!--======= SIGNATURE HERO SHOWCASE (HIGH-DUTY INDUSTRIAL WINCHES) =========-->
+    <section class="winch-hero-banner">
+      <div class="container">
+        <div class="row winch-hero-row">
+          <!-- Left Column: Content & Engineering Creds -->
+          <div class="col-md-7 col-sm-12 winch-hero-col-left">
+            <div class="winch-hero-content">
+              <div class="winch-hero-badge">
+                <span class="badge-dot"></span> Europull Hebentechnik UK Ltd &bull; Since 1940
+              </div>
+              <h1 class="winch-hero-title">Heavy-Duty Industrial Winches</h1>
+              <p class="winch-hero-desc">
+                High-capacity hydraulic, electric, and manual winch systems engineered for extreme towing, marine, mining, and oilfield recovery operations worldwide.
+              </p>
+              
+              <!-- Key Series Badges -->
+              <div class="winch-hero-highlights">
+                <span class="hero-chip"><i class="fa fa-cogs"></i> Hydraulic (10T - 15T)</span>
+                <span class="hero-chip"><i class="fa fa-bolt"></i> 24V DC Electric (Up to 25T)</span>
+                <span class="hero-chip"><i class="fa fa-tint"></i> IP67 Marine Grade</span>
+              </div>
+
+              <!-- Clean Breadcrumb -->
+              <ol class="breadcrumb winch-hero-breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li class="active">Industrial Winches</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Right Column: Hero Winch Visual -->
+          <div class="col-md-5 col-sm-12 winch-hero-col-right">
+            <div class="winch-hero-visual">
+              <div class="winch-hero-glow"></div>
+              <img src="images/Onshore/Product Images/HWV-15000.png" alt="Europull HWV 15000 Heavy-Duty Hydraulic Winch" class="img-responsive winch-hero-img">
+              <div class="winch-model-tag">
+                <span class="model-name">HWV 15000</span>
+                <span class="model-spec">15,000 kg Heavy-Duty Series</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
