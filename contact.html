@@ -47,6 +47,7 @@
 
 
   <!-- Google Tag Manager -->
+  <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
       w[l] = w[l] || []; w[l].push({
         'gtm.start':
@@ -57,7 +58,325 @@
     })(window, document, 'script', 'dataLayer', 'GTM-W4CT928J');</script>
   <!-- End Google Tag Manager -->
 
+  <style>
+    /* Contact Page Modern Redesign */
+    .contact-hero-bnr {
+      background: url('images/slider/slider7.webp') center center no-repeat;
+      background-size: cover;
+      min-height: 250px;
+      position: relative;
+      padding: 35px 0 115px;
+    }
+    .contact-hero-bnr:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0.86) 100%);
+    }
+    .contact-breadcrumb {
+      position: relative;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 18px;
+      border-radius: 20px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .contact-breadcrumb a {
+      color: #f59e0b;
+      text-decoration: none;
+    }
+    .contact-breadcrumb a:hover {
+      color: #ffe115;
+    }
+    .contact-breadcrumb span {
+      color: #94a3b8;
+    }
 
+    /* Global Hubs Overlapping Cards */
+    .contact-hubs-wrap {
+      position: relative;
+      z-index: 5;
+      margin-top: -85px;
+      margin-bottom: 75px;
+    }
+    .hub-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 32px 20px 28px;
+      text-align: center;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      height: calc(100% - 20px);
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hub-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: #f59e0b;
+    }
+    .hub-icon-circle {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 8px 18px rgba(245, 158, 11, 0.3);
+    }
+    .hub-title {
+      font-size: 17px;
+      font-weight: 800;
+      color: #1e293b;
+      margin: 0 0 10px 0;
+      line-height: 24px;
+      letter-spacing: 0.2px;
+    }
+    .hub-company {
+      font-size: 13px;
+      font-weight: 600;
+      color: #475569;
+      margin-bottom: 8px;
+      line-height: 18px;
+    }
+    .hub-address {
+      font-size: 13px;
+      color: #64748b;
+      line-height: 20px;
+      margin: 0;
+    }
+    .hub-address a {
+      color: #f59e0b;
+      font-weight: 600;
+    }
+    .hub-address a:hover {
+      color: #d97706;
+      text-decoration: underline;
+    }
+
+    /* RFQ & Solutions Section */
+    .rfq-section {
+      padding-bottom: 90px;
+    }
+    .rfq-badge {
+      display: inline-block;
+      background: rgba(245, 158, 11, 0.1);
+      border: 1px solid #f59e0b;
+      color: #d97706;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .rfq-title {
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 46px;
+      color: #1e293b;
+      margin: 0 0 18px 0;
+      letter-spacing: 0.5px;
+    }
+    .rfq-title .highlight {
+      color: #f59e0b;
+      display: block;
+    }
+    .rfq-desc {
+      font-size: 14px;
+      line-height: 25px;
+      color: #64748b;
+      margin-bottom: 26px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .supply-network-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid #f59e0b;
+      border-radius: 8px;
+      padding: 20px 22px;
+      margin-bottom: 30px;
+    }
+    .supply-network-box h6 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 12px 0;
+    }
+    .supply-network-box ul {
+      padding-left: 0;
+      list-style: none;
+      margin: 0;
+    }
+    .supply-network-box ul li {
+      font-size: 13px;
+      line-height: 22px;
+      color: #475569;
+      margin-bottom: 6px;
+    }
+    .supply-network-box ul li strong {
+      color: #1e293b;
+    }
+    .social-connect-box {
+      margin-top: 25px;
+    }
+    .social-connect-box h6 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #1e293b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 14px 0;
+    }
+    .social-connect-box .social-list {
+      display: flex;
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+      margin: 0;
+    }
+    .social-connect-box .social-list a {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #475569;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+    .social-connect-box .social-list a:hover {
+      background: #f59e0b;
+      color: #ffffff;
+      border-color: #f59e0b;
+      transform: translateY(-2px);
+    }
+
+    /* RFQ Form Box */
+    .rfq-form-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 35px 30px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    }
+    .rfq-form-card .form-group {
+      margin-bottom: 20px;
+    }
+    .rfq-form-card label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 7px;
+      display: block;
+    }
+    .rfq-form-card .form-control {
+      height: 46px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      box-shadow: none;
+      font-size: 14px;
+      color: #1e293b;
+      background: #ffffff;
+      padding: 10px 14px;
+      transition: all 0.2s ease;
+    }
+    .rfq-form-card select.form-control {
+      padding: 10px 12px;
+    }
+    .rfq-form-card .form-control:focus {
+      border-color: #f59e0b;
+      box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.15);
+      outline: none;
+    }
+    .rfq-form-card textarea.form-control {
+      height: auto;
+      resize: vertical;
+    }
+    .rfq-file-upload {
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 18px 20px;
+      text-align: center;
+      background: #ffffff;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+    .rfq-file-upload:hover {
+      border-color: #f59e0b;
+      background: #fffbeb;
+    }
+    .rfq-file-upload input[type="file"] {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .rfq-submit-btn {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 14px 34px;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 8px 20px rgba(245, 158, 11, 0.25);
+      transition: all 0.2s ease;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .rfq-submit-btn:hover {
+      background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 25px rgba(245, 158, 11, 0.35);
+      color: #ffffff;
+    }
+    .rfq-success-msg {
+      display: none;
+      background: #ecfdf5;
+      border: 1px solid #10b981;
+      color: #065f46;
+      border-radius: 6px;
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+    @media (max-width: 767px) {
+      .rfq-title { font-size: 26px; line-height: 34px; }
+      .contact-hubs-wrap { margin-top: -50px; margin-bottom: 45px; }
+      .rfq-form-card { padding: 22px 18px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -103,7 +422,7 @@
                     <li><a href="heavy-duty-europull-winches-in-saudi-arabia.html">Heavy-Duty Winches</a></li>
                   </ul>
                 </li>
-                <li> <a href="europull-lifting-equipment-in-saudi.html">Brands</a> </li>
+                <!-- <li> <a href="europull-lifting-equipment-in-saudi.html">Brands</a> </li> -->
                 <li> <a href="about-us_01.html">About</a> </li>
                 <li> <a href="blog.html">Blog</a> </li>
                 <li class="active"> <a href="contact.html">Contact</a> </li>
@@ -145,78 +464,202 @@
     <!-- Content -->
     <div id="content">
 
-      <!--======= CONATACT  =========-->
-      <section class="contact padding-top-100 padding-bottom-100">
+      <!-- Sub Banner Hero -->
+      <section class="contact-hero-bnr">
         <div class="container">
-          <div class="contact-form">
-            <h5>PLEASE fill-up FEW details</h5>
-            <div class="row">
-              <div class="col-md-8">
+          <div class="contact-breadcrumb">
+            <a href="index.html"><i class="fa fa-home"></i> Home</a>
+            <i class="fa fa-long-arrow-right"></i>
+            <span>Contact</span>
+          </div>
+        </div>
+      </section>
 
-                <!--======= Success Msg =========-->
-                <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your
-                  Message has been Submitted</div>
-
-                <!--======= FORM  =========-->
-                <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
-                  <ul class="row">
-                    <li class="col-sm-6">
-                      <label>full name *
-                        <input type="text" class="form-control" name="name" id="name" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-6">
-                      <label>Email *
-                        <input type="text" class="form-control" name="email" id="email" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-6">
-                      <label>Phone *
-                        <input type="text" class="form-control" name="company" id="company" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-6">
-                      <label>SUBJECT
-                        <input type="text" class="form-control" name="website" id="website" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-12">
-                      <label>Message
-                        <textarea class="form-control" name="message" id="message" rows="5" placeholder=""></textarea>
-                      </label>
-                    </li>
-                    <li class="col-sm-12">
-                      <button type="submit" value="submit" class="btn" id="btn_submit" onClick="proceed();">SEND
-                        MAIL</button>
-                    </li>
-                  </ul>
-                </form>
-              </div>
-
-              <!--======= ADDRESS INFO  =========-->
-              <div class="col-md-4">
-                <div class="contact-info">
-                  <h6>OUR ADDRESS</h6>
-                  <ul>
-                    <li> <i class="icon-map-pin"></i> EUROPULL HEBENTECHNIK UK LIMITED<br>
-                      61 BRIDGE STREET, KINGTON, HR5 3DJ, United Kingdom.</li>
-                    <li> <i class="icon-globe"></i> WWW.EUROPULL.COM</li>
-                    <li> <i class="icon-envelope"></i> <a href="mailto:INFO@EUROPULL.COM"
-                        target="_top">INFO@EUROPULL.COM</a> </li>
-                    <li>
-                      <p>Contact us for quotes, support, or general inquiries about our lifting equipment.</p>
-                    </li>
-                  </ul>
+      <!-- Overlapping Global Hub Cards -->
+      <section class="contact-hubs-wrap">
+        <div class="container">
+          <div class="row">
+            <!-- Hub 1: UK -->
+            <div class="col-md-3 col-sm-6">
+              <div class="hub-card">
+                <div class="hub-icon-circle">
+                  <i class="fa fa-building-o"></i>
                 </div>
+                <h3 class="hub-title">Global Headquarters<br>(UK)</h3>
+                <div class="hub-company">Europull Hebentechnik UK Limited</div>
+                <p class="hub-address">61 Bridge Street, Kington, HR5 3DJ,<br>United Kingdom</p>
+              </div>
+            </div>
+
+            <!-- Hub 2: Germany -->
+            <div class="col-md-3 col-sm-6">
+              <div class="hub-card">
+                <div class="hub-icon-circle">
+                  <i class="fa fa-industry"></i>
+                </div>
+                <h3 class="hub-title">German Engineering<br>Hub</h3>
+                <div class="hub-company">Europull Hebentechnik GmbH</div>
+                <p class="hub-address">Alts–Heerdts 104, 40549<br>Düsseldorf–Stadtbezirk 4,<br>Germany</p>
+              </div>
+            </div>
+
+            <!-- Hub 3: Middle East -->
+            <div class="col-md-3 col-sm-6">
+              <div class="hub-card">
+                <div class="hub-icon-circle">
+                  <i class="fa fa-map-marker"></i>
+                </div>
+                <h3 class="hub-title">Middle East<br>Operations</h3>
+                <div class="hub-company">Serving the Middle East & Africa</div>
+                <p class="hub-address">JQQ6+J8H, Al Faisaliyyah, Riyadh<br>12881, Saudi Arabia</p>
+              </div>
+            </div>
+
+            <!-- Hub 4: Direct Sales & Support -->
+            <div class="col-md-3 col-sm-6">
+              <div class="hub-card">
+                <div class="hub-icon-circle">
+                  <i class="fa fa-headphones"></i>
+                </div>
+                <h3 class="hub-title">Direct Sales &<br>Support</h3>
+                <p class="hub-address" style="margin-top: 10px;">
+                  Email: <a href="mailto:info@europull.com">info@europull.com</a><br>
+                  Web: <a href="https://europull.com" target="_blank">europull.com</a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!--======= MAP =========-->
-      <div id="map"></div>
+      <!-- RFQ & Solutions Section -->
+      <section class="rfq-section">
+        <div class="container">
+          <div class="row">
+            <!-- Left Info Column -->
+            <div class="col-md-5">
+              <div class="rfq-badge">Request A Quote</div>
+              <h2 class="rfq-title">
+                Heavy-Duty
+                <span class="highlight">Lifting & Rigging Solutions</span>
+              </h2>
+              <p class="rfq-desc">
+                Require a quote for industrial lifting equipment, lashing systems, or marine winches? Europull Hebentechnik delivers certified, heavy-duty rigging hardware engineered for critical loads and severe operating environments.
+              </p>
 
+              <div class="supply-network-box">
+                <h6>Regional Supply Network</h6>
+                <ul>
+                  <li><strong>Middle East:</strong> Saudi Arabia (KSA), UAE, Qatar, Oman, Kuwait, Bahrain</li>
+                  <li><strong>Africa:</strong> Egypt, Nigeria, South Africa, Kenya, Algeria, Angola</li>
+                </ul>
+              </div>
+
+              <div class="social-connect-box">
+                <h6>Follow Us On Social Media</h6>
+                <ul class="social-list">
+                  <li><a href="https://www.facebook.com/profile.php?id=61586009966591" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://www.instagram.com/europull/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                  <li><a href="https://www.youtube.com/@europull" target="_blank" title="YouTube"><i class="fa fa-youtube-play"></i></a></li>
+                  <li><a href="https://www.linkedin.com/company/europull/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Right Form Column -->
+            <div class="col-md-7">
+              <div class="rfq-form-card">
+                <div id="rfq_success" class="alert alert-success" style="display:none; margin-bottom: 20px;">
+                  <i class="fa fa-check-circle"></i> Thank you! Your request has been received. Our engineering and sales team will contact you shortly.
+                </div>
+
+                <form id="rfq_contact_form" onsubmit="handleRfqSubmit(event)">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" id="first_name" name="first_name" class="form-control" required placeholder="First Name">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" id="last_name" name="last_name" class="form-control" required placeholder="Last Name">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="corporate_email">Corporate Email *</label>
+                        <input type="email" id="corporate_email" name="corporate_email" class="form-control" required placeholder="name@company.com">
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="phone_number">Phone / WhatsApp</label>
+                        <input type="tel" id="phone_number" name="phone_number" class="form-control" placeholder="+966 ...">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="inquiry_type">Inquiry Type</label>
+                        <select id="inquiry_type" name="inquiry_type" class="form-control">
+                          <option value="quote">Request for Quote (RFQ)</option>
+                          <option value="winches">Heavy-Duty Winches Inquiry</option>
+                          <option value="technical">Technical Specifications & Engineering</option>
+                          <option value="distributor">Distribution & Partnership</option>
+                          <option value="general">General Inquiries</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <label for="delivery_country">Delivery Country / Region</label>
+                        <select id="delivery_country" name="delivery_country" class="form-control">
+                          <option value="Saudi Arabia">Saudi Arabia (KSA)</option>
+                          <option value="United Arab Emirates">United Arab Emirates (UAE)</option>
+                          <option value="Qatar">Qatar</option>
+                          <option value="Kuwait">Kuwait</option>
+                          <option value="Oman">Oman</option>
+                          <option value="Bahrain">Bahrain</option>
+                          <option value="Egypt">Egypt</option>
+                          <option value="United Kingdom">United Kingdom</option>
+                          <option value="Germany">Germany / Europe</option>
+                          <option value="Other">Other International Destination</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="project_details">Project Details / Equipment Specifications *</label>
+                    <textarea id="project_details" name="project_details" class="form-control" rows="4" required placeholder="Specify capacity (tonnes), wire rope length, operating conditions, or relevant part numbers..."></textarea>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Drawings or Technical Specs (Optional)</label>
+                    <div class="rfq-file-upload">
+                      <input type="file" id="spec_file" name="spec_file" onchange="updateFileName(this)">
+                      <i class="fa fa-cloud-upload" style="font-size: 24px; color: #f59e0b; display: block; margin-bottom: 6px;"></i>
+                      <span id="file_label" style="font-size: 13px; color: #64748b;">Drop engineering drawings or specs here, or <span style="color: #f59e0b; font-weight: 600;">browse</span></span>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="rfq-submit-btn" id="rfq_submit_btn">
+                    <span>Submit Request</span>
+                    <i class="fa fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
     </div>
 
@@ -292,36 +735,30 @@
   <script src="js/main.js"></script>
   <script src="js/cart.js"></script>
 
-  <!-- Begin Map Script -->
-  <script type='text/javascript' src='http://maps.google.com/maps/api/js?sensor=false'></script>
+  <!-- Contact Form & Upload Handlers -->
   <script type="text/javascript">
-    /*==========  Map  ==========*/
-    var map;
-    function initialize_map() {
-      if ($('#map').length) {
-        var myLatLng = new google.maps.LatLng(-37.814199, 144.961560);
-        var mapOptions = {
-          zoom: 17,
-          center: myLatLng,
-          scrollwheel: false,
-          panControl: false,
-          zoomControl: true,
-          scaleControl: false,
-          mapTypeControl: false,
-          streetViewControl: false
-        };
-        map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          tittle: 'Envato',
-          icon: './images/map-locator.png'
-        });
-      } else {
-        return false;
+    function updateFileName(input) {
+      var label = document.getElementById('file_label');
+      if (input.files && input.files[0]) {
+        label.innerHTML = 'Selected: <strong style="color:#1e293b;">' + input.files[0].name + '</strong>';
       }
     }
-    google.maps.event.addDomListener(window, 'load', initialize_map);
+
+    function handleRfqSubmit(e) {
+      e.preventDefault();
+      var btn = document.getElementById('rfq_submit_btn');
+      btn.disabled = true;
+      btn.innerHTML = '<span>Sending Request...</span> <i class="fa fa-spinner fa-spin"></i>';
+      
+      setTimeout(function() {
+        btn.style.display = 'none';
+        var success = document.getElementById('rfq_success');
+        if (success) {
+          success.style.display = 'block';
+          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 700);
+    }
   </script>
 </body>
 
