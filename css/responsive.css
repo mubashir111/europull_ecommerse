@@ -1289,3 +1289,10 @@ header .logo img {
 	max-width: 130px;
 }
 }
+/* The Products link already shows its own down-chevron icon; hide the theme's
+   extra "›" so mobile shows a single arrow. */
+@media (max-width: 767px) {
+header .navbar .nav li.dropdown:before {
+	display: none;
+}
+}
