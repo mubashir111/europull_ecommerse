@@ -16,14 +16,34 @@ $(document).ready(function () {
         // --- Document Title & Headers ---
         document.title = product.name + " - Europull Lifting Equipment";
         $('.sub-bnr h4').text(product.name.toUpperCase());
-        $('#product-detail-name, .shop-detail h4').text(product.name);
+        $('#product-detail-name').text(product.name);
+
+        // --- Breadcrumb ---
+        $('#pd-crumb-category').text(product.category);
+        $('#pd-crumb-name').text(product.name);
 
         // --- Metadata ---
-        $('.item-owner li:first-child span').text(' Europull');
-        $('#product-detail-category').text(' ' + product.category);
+        var standard = product.standard || (product.specs && product.specs.Standard) || 'EN / CE';
+        $('#product-detail-category').text(product.category);
+        $('#product-detail-standard').text(standard);
+        $('#pd-trust-standard').text('Certified to ' + standard);
 
         // --- Summary Lead Description ---
         $('#product-detail-desc').text(product.description);
+
+        // --- Key Specs Strip (Standard is already shown in the meta line) ---
+        var $keySpecs = $('#product-key-specs');
+        $keySpecs.empty();
+        if (product.specs) {
+            Object.keys(product.specs).filter(function (k) {
+                return k !== 'Standard';
+            }).slice(0, 3).forEach(function (k) {
+                $keySpecs.append($('<li>')
+                    .append($('<span class="pd-keyspec-label">').text(k))
+                    .append($('<span class="pd-keyspec-value">').text(product.specs[k])));
+            });
+        }
+        $keySpecs.toggle($keySpecs.children().length > 0);
 
         // --- Main Images Slider (FlexSlider) ---
         var $slider = $('.images-slider');
@@ -70,7 +90,7 @@ $(document).ready(function () {
                 var rowHtml = '<tr>' +
                     '<td class="spec-param">' + p[0] + '</td>' +
                     '<td class="spec-val">' + p[1] + '</td>' +
-                    '<td class="spec-range"><span style="background: #e0f2fe; color: #0369a1; font-weight: 700; font-size: 11px; padding: 4px 8px; border-radius: 4px; display: inline-block;">' + p[2] + '</span></td>' +
+                    '<td class="spec-range"><span class="spec-chip">' + p[2] + '</span></td>' +
                     '</tr>';
                 $paramBody.append(rowHtml);
             });

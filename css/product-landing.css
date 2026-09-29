@@ -1,0 +1,543 @@
+/* ========================================================
+   SINGLE-PRODUCT LANDING PAGES
+   (safety spectacles, welding umbrella, ...)
+   Each page sets --pl-accent to the product's own colour.
+   ======================================================== */
+.pl-page {
+  --pl-accent: #ffe115;
+}
+
+/* Hero */
+.pl-hero {
+  background: linear-gradient(135deg, #131c26 0%, #1e293b 50%, #111822 100%);
+  position: relative;
+  padding: 65px 0 55px;
+  overflow: hidden;
+  border-bottom: 3px solid #ffe115;
+}
+
+.pl-hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 75% 50%, rgba(255, 225, 21, 0.1) 0%, transparent 60%),
+              radial-gradient(circle at 20% 20%, rgba(45, 58, 75, 0.6) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.pl-hero-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.pl-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 225, 21, 0.12);
+  border: 1px solid rgba(255, 225, 21, 0.4);
+  color: #ffe115;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.pl-hero-badge .badge-dot {
+  width: 7px;
+  height: 7px;
+  background: #ffe115;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+  box-shadow: 0 0 8px #ffe115;
+}
+
+.pl-hero-title {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 44px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.pl-hero-subtitle {
+  color: #ffe115;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+}
+
+.pl-hero-desc {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 22px;
+  max-width: 600px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pl-hero-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.pl-hero-chips span {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pl-hero-chips i {
+  color: #ffe115;
+}
+
+.pl-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.pl-hero-breadcrumb {
+  background: rgba(0, 0, 0, 0.35);
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  margin: 0;
+}
+
+.pl-hero-breadcrumb li {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.pl-hero-breadcrumb li a {
+  color: #ffe115;
+}
+
+.pl-hero-breadcrumb li.active {
+  color: #ffffff;
+}
+
+.pl-hero-visual {
+  text-align: center;
+}
+
+/* Product photos come with light backgrounds, so frame them as a card. */
+.pl-hero-card {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 14px;
+  border-bottom: 4px solid var(--pl-accent);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.45);
+}
+
+.pl-hero-card img {
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.pl-hero-tag {
+  margin: 18px auto 0;
+  display: table;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 225, 21, 0.4);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 11px;
+  color: #cbd5e1;
+}
+
+.pl-hero-tag strong {
+  color: #ffe115;
+  letter-spacing: 1px;
+  margin-right: 8px;
+}
+
+/* Colour swatch used in chips and tables */
+.pl-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  vertical-align: middle;
+  background: var(--pl-accent);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* Section headings (same as the winch page) */
+.pl-page .heading h2 {
+  font-weight: bold;
+  color: #2d3a4b;
+  font-size: 24px;
+  margin: 0 0 16px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.pl-page .heading span {
+  display: inline-block;
+  width: 70%;
+  font-size: 14px;
+  line-height: 24px;
+  color: #666666;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.pl-lead {
+  font-size: 15px;
+  line-height: 28px;
+  color: #555;
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 40px;
+}
+
+.pl-equal-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Feature cards */
+.pl-feature {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #2d3a4b;
+  border-radius: 4px;
+  padding: 24px 22px;
+  margin-bottom: 30px;
+  height: calc(100% - 30px);
+  transition: all 0.3s ease;
+}
+
+.pl-feature:hover {
+  border-top-color: #ffe115;
+  box-shadow: 0 8px 24px rgba(45, 58, 75, 0.08);
+  transform: translateY(-3px);
+}
+
+.pl-feature-icon {
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  border-radius: 50%;
+  background: #2d3a4b;
+  color: #ffe115;
+  font-size: 17px;
+  margin-bottom: 14px;
+}
+
+.pl-feature h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3a4b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 10px;
+}
+
+.pl-feature p {
+  font-size: 13px;
+  line-height: 22px;
+  color: #666;
+  margin: 0;
+}
+
+/* Spec table + model card */
+.pl-spec-table {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.pl-spec-table > thead > tr > th {
+  background: #2d3a4b;
+  color: #ffffff;
+  padding: 14px 18px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #ffe115;
+}
+
+.pl-spec-table > tbody > tr > td {
+  padding: 14px 18px;
+  vertical-align: middle;
+  color: #334155;
+}
+
+.pl-spec-table > tbody > tr > td:first-child {
+  width: 40%;
+  font-weight: 700;
+  color: #2d3a4b;
+  background: #f8fafc;
+}
+
+.pl-model {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 5px solid var(--pl-accent);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.pl-model-img {
+  background: #ffffff;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid #eef2f6;
+}
+
+.pl-model-img img {
+  max-height: 240px;
+  margin: 0 auto;
+}
+
+.pl-model-body {
+  padding: 22px 24px 26px;
+}
+
+.pl-model-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #2d3a4b;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  line-height: 1.4;
+  margin: 0 0 12px;
+}
+
+.pl-model-body p {
+  font-size: 14px;
+  line-height: 24px;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+/* Photos with their own studio background fill the frame edge to edge. */
+.pl-model-img.pl-photo {
+  padding: 0;
+}
+
+.pl-photo img,
+.pl-model-img.pl-photo img {
+  width: 100%;
+  height: 240px;
+  max-height: none;
+  object-fit: cover;
+}
+
+/* Related models */
+.pl-related {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pl-related:hover,
+.pl-related:focus {
+  border-color: #2d3a4b;
+  box-shadow: 0 8px 24px rgba(45, 58, 75, 0.08);
+  transform: translateY(-3px);
+  text-decoration: none;
+}
+
+.pl-related img {
+  max-height: 200px;
+  margin: 0 auto;
+}
+
+.pl-related-body {
+  padding: 16px 18px 20px;
+  border-top: 1px solid #eef2f6;
+}
+
+.pl-related-body h5 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #2d3a4b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 6px;
+}
+
+.pl-related-body span {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Region cards (same as the winch page) */
+.pl-page .europull-region-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  padding: 22px 20px;
+  height: calc(100% - 30px);
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.3s ease;
+}
+
+.pl-page .europull-region-box:hover {
+  border-color: #ffe115;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(45, 58, 75, 0.08);
+}
+
+.pl-page .europull-region-box h6 {
+  color: #2d3a4b;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pl-page .europull-region-box h6 i {
+  color: #ffe115;
+  font-size: 16px;
+}
+
+.pl-page .region-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.pl-page .region-tags span {
+  background: #f1f5f9;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 3px;
+  border: 1px solid #e2e8f0;
+}
+
+.pl-page .europull-region-box p {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #666;
+}
+
+/* Contact band */
+.pl-cta-band {
+  background: #2d3a4b;
+  padding: 50px 30px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pl-cta-band h4 {
+  color: #ffffff;
+  font-size: 22px;
+  letter-spacing: 2px;
+  margin: 0 0 15px;
+  text-transform: uppercase;
+}
+
+.pl-cta-band p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  color: #cbd5e1;
+  margin-bottom: 25px;
+  line-height: 28px;
+}
+
+.pl-cta-contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.pl-cta-contact i {
+  color: #ffe115;
+  margin-right: 8px;
+}
+
+.pl-cta-contact a {
+  color: #ffe115;
+  font-weight: bold;
+}
+
+.pl-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+@media (max-width: 991px) {
+  .pl-hero-row {
+    display: block;
+  }
+
+  .pl-hero-visual {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pl-page .heading span {
+    width: 95%;
+  }
+
+  .pl-hero {
+    padding: 45px 0 40px;
+  }
+
+  .pl-hero-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .pl-hero-card img {
+    max-height: 220px;
+  }
+}

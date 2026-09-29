@@ -1576,6 +1576,12 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	color: #fff;
 }
 
+/* Keep the hover buttons on one row: the left:50% centering otherwise
+   limits this box to half the card width and the third button wraps. */
+.arrival-block .overlay .position-center-center {
+	white-space: nowrap;
+}
+
 .arrival-block .price {
 	position: absolute;
 	right: 20px;
@@ -1852,9 +1858,9 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	flex-direction: column;
 }
 
-/* Ensure items take full height and are clickable */
+/* Ensure items take full height and are clickable.
+   .arrival-block .item is left out: it is a 25% float grid cell. */
 .papular-block .item,
-.arrival-block .item,
 .item[data-url] {
 	width: 100%;
 	height: 100%;
@@ -2208,7 +2214,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 }
 
 .shop-detail p {
-	font-family: 'Playfair Display', serif;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .shop-detail h4 {
@@ -5962,6 +5968,12 @@ main {
     text-align: center;
 }
 
+/* The generic slider's white bottom strip is offset by this box's padding
+   and paints over the right border, so drop it here. */
+.product-detail-image-box:before {
+    display: none;
+}
+
 .product-detail-image-box img {
     margin: 0 auto;
     max-height: 460px;
@@ -5969,7 +5981,7 @@ main {
 }
 
 .europull-quick-specs {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-bottom: 25px;
     background: #ffffff;
     border: 1px solid #cbd5e1;
@@ -5984,15 +5996,15 @@ main {
 }
 
 .europull-spec-table thead tr th {
-    background: #dbeafe !important; /* Gentle light blue as requested in reference */
-    color: #1e3a8a !important;
+    background: #2d3a4b !important;
+    color: #ffffff !important;
     font-weight: 700;
     font-size: 13px;
     letter-spacing: 0.3px;
     text-transform: capitalize;
     padding: 12px 14px;
     border: none !important;
-    border-bottom: 2px solid #bfdbfe !important;
+    border-bottom: 2px solid #ffe115 !important;
 }
 
 .europull-spec-table tbody tr {
@@ -6004,10 +6016,10 @@ main {
 }
 
 .europull-spec-table tbody tr:hover {
-    background-color: #eff6ff;
+    background-color: #fefce8;
 }
 
-.europull-spec-table tbody td {
+.europull-spec-table > tbody > tr > td {
     padding: 10px 14px;
     font-size: 13px;
     line-height: 1.5;
@@ -6028,10 +6040,17 @@ main {
 }
 
 .europull-spec-table td.spec-range {
-    color: #0369a1;
-    font-weight: 600;
-    font-size: 12px;
     width: 25%;
+}
+
+.europull-spec-table .spec-chip {
+    display: inline-block;
+    background: #fff8c5;
+    color: #2d3a4b;
+    font-weight: 700;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 /* Full Engineering Specifications Table (Lower Tab - Toyolift / Europull PDF Style) */
@@ -6200,4 +6219,204 @@ main {
     font-size: 12px;
     line-height: 18px;
     color: #64748b;
+}
+
+/* ========================================================
+   PRODUCT DETAIL HERO
+   ======================================================== */
+.pd-section {
+    padding-top: 30px;
+}
+
+.pd-breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0 0 30px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.pd-breadcrumb > li,
+.pd-breadcrumb > li a {
+    color: #64748b;
+}
+
+.pd-breadcrumb > li a:hover {
+    color: #2d3a4b;
+}
+
+.pd-breadcrumb > .active {
+    color: #2d3a4b;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    .pd-gallery {
+        position: sticky;
+        top: 110px;
+    }
+}
+
+.shop-detail .pd-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+    margin: 0 0 12px;
+}
+
+.shop-detail .pd-meta {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.pd-meta strong {
+    color: #2d3a4b;
+    font-weight: 600;
+}
+
+.pd-meta-sep {
+    margin: 0 8px;
+    color: #cbd5e1;
+}
+
+.shop-detail .pd-desc {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #475569;
+    max-width: 62ch;
+    margin: 0 0 22px;
+}
+
+.pd-keyspecs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 0 0 25px;
+    padding: 0;
+    list-style: none;
+}
+
+.pd-keyspecs li {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 3px solid #ffe115;
+    border-radius: 6px;
+    padding: 10px 14px;
+}
+
+.pd-keyspec-label {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    margin-bottom: 2px;
+}
+
+.pd-keyspec-value {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d3a4b;
+    line-height: 1.35;
+}
+
+.pd-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.pd-cta .btn {
+    flex: 1 1 200px;
+    height: 50px;
+    line-height: 48px;
+    padding: 0 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #2d3a4b;
+}
+
+.pd-cta .btn i {
+    margin-right: 8px;
+}
+
+.pd-cta .pd-btn-primary {
+    background: #ffe115;
+    border-color: #ffe115;
+    color: #2d3a4b;
+}
+
+.pd-cta .pd-btn-primary:hover,
+.pd-cta .pd-btn-primary:focus {
+    background: #2d3a4b;
+    border-color: #2d3a4b;
+    color: #ffffff;
+}
+
+.pd-cta .pd-btn-secondary {
+    background: #ffffff;
+    color: #2d3a4b;
+}
+
+.pd-cta .pd-btn-secondary:hover,
+.pd-cta .pd-btn-secondary:focus {
+    background: #2d3a4b;
+    color: #ffffff;
+}
+
+.shop-detail .pd-contact {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0 0 22px;
+}
+
+.pd-contact i {
+    margin-right: 6px;
+}
+
+.pd-contact a {
+    color: #2d3a4b;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.pd-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin: 0 0 20px;
+    padding: 16px 0;
+    list-style: none;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #2d3a4b;
+}
+
+.pd-trust i {
+    color: #16a34a;
+    margin-right: 6px;
+}
+
+@media (max-width: 767px) {
+    .pd-gallery {
+        margin-bottom: 30px;
+    }
+
+    .shop-detail .pd-title {
+        font-size: 22px;
+    }
 }
