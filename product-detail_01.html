@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="robots" content="noindex, follow">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-site-verification" content="83O0tPzErQK_wLkHAL2P2ZyA0dyfov4zYpjTD1YBax4">
@@ -41,6 +42,15 @@
 
   <!-- JavaScripts -->
   <script src="js/modernizr.js"></script>
+
+  <!-- Each product now has its own static page; send old ?id= links there. -->
+  <script src="js/product-urls.js"></script>
+  <script>
+    (function () {
+      var id = new URLSearchParams(window.location.search).get('id');
+      if (id && productUrls[id]) window.location.replace(productUrls[id]);
+    })();
+  </script>
 
   <!-- Online Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -331,13 +341,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=manual-chain-hoist">Manual Chain Hoist</a>
+              <div class="item-name"> <a href="manual-chain-hoist.html">Manual Chain Hoist</a>
                 <p>Hoists</p>
               </div>
               <!-- Price -->
               <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="manual-chain-hoist"
                   data-name="Manual Chain Hoist" data-image="images/original_products/manual-chain-hoist.jpg"
-                  data-url="product-detail_01.html?id=manual-chain-hoist">Add to Quote</a></span>
+                  data-url="manual-chain-hoist.html">Add to Quote</a></span>
             </div>
 
             <!-- Item 2: Manual Push Trolley -->
@@ -355,13 +365,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=manual-push-trolley">Trolley</a>
+              <div class="item-name"> <a href="manual-push-trolley.html">Trolley</a>
                 <p>Trolleys</p>
               </div>
               <!-- Price -->
               <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="manual-push-trolley"
                   data-name="Trolley" data-image="images/original_products/manual-push-trolley.jpg"
-                  data-url="product-detail_01.html?id=manual-push-trolley">Add to Quote</a></span>
+                  data-url="manual-push-trolley.html">Add to Quote</a></span>
             </div>
 
             <!-- Item 3: Electrical Winch -->
@@ -379,13 +389,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=electrical-winch">Electrical Winch</a>
+              <div class="item-name"> <a href="electrical-winch.html">Electrical Winch</a>
                 <p>Winches</p>
               </div>
               <!-- Price -->
               <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="electrical-winch"
                   data-name="Electrical Winch" data-image="images/original_products/electrical_winch.jpg"
-                  data-url="product-detail_01.html?id=electrical-winch">Add to Quote</a></span>
+                  data-url="electrical-winch.html">Add to Quote</a></span>
             </div>
 
             <!-- Item 4: Drum Lifter -->
@@ -403,13 +413,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <!-- Item Name -->
-              <div class="item-name"> <a href="product-detail_01.html?id=drum-lifter">Drum Lifter</a>
+              <div class="item-name"> <a href="drum-lifter.html">Drum Lifter</a>
                 <p>Material Handling</p>
               </div>
               <!-- Price -->
               <span class="price"><a href="#" class="btn btn-small btn-round add-to-quote" data-id="drum-lifter"
                   data-name="Drum Lifter" data-image="images/original_products/drum_lifter.jpg"
-                  data-url="product-detail_01.html?id=drum-lifter">Add to Quote</a></span>
+                  data-url="drum-lifter.html">Add to Quote</a></span>
             </div>
           </div>
         </div>
@@ -447,7 +457,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- ABOUT Location -->
         <div class="col-md-4">
-          <div class="about-footer"> <img class="margin-bottom-30" src="images/logo.png" alt="">
+          <div class="about-footer"> <img class="margin-bottom-30" src="images/logo.png" alt="Europull logo">
             <p><i class="icon-pointer"></i> EUROPULL HEBENTECHNIK UK LIMITED<br>
               61 BRIDGE STREET, KINGTON, HR5 3DJ, <br>
               United Kingdom.</p>

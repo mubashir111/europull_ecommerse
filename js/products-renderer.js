@@ -70,7 +70,7 @@ $(document).ready(function () {
 
                 var itemHtml = `
                 <div class="col-md-3 col-sm-6">
-                    <div class="item" data-url="product-detail_01.html?id=${p.id}">
+                    <div class="item" data-url="${productUrl(p.id)}">
                         <div class="item-img"> 
                             <img class="img-1" src="${img}" alt="${p.name}"> 
                             <img class="img-2" src="${img}" alt="${p.name}">
@@ -78,13 +78,13 @@ $(document).ready(function () {
                                 <div class="position-center-center">
                                     <div class="inn">
                                         <a href="${img}" data-lighter><i class="icon-magnifier"></i></a>
-                                        <a href="product-detail_01.html?id=${p.id}"><i class="icon-link"></i></a>
+                                        <a href="${productUrl(p.id)}"><i class="icon-link"></i></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="item-name"> 
-                            <a href="product-detail_01.html?id=${p.id}">${p.name}</a>
+                            <a href="${productUrl(p.id)}">${p.name}</a>
                             <p>${p.description ? p.description.substring(0, 50) + '...' : ''}</p>
                         </div>
                         <span class="price">
@@ -92,7 +92,7 @@ $(document).ready(function () {
                                data-id="${p.id}" 
                                data-name="${p.name}" 
                                data-image="${img}" 
-                               data-url="product-detail_01.html?id=${p.id}">
+                               data-url="${productUrl(p.id)}">
                                Add to Quote
                             </a>
                         </span>

@@ -4137,6 +4137,7 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	z-index: -1;
 }
 
+.sub-bnr h1,
 .sub-bnr h4 {
 	font-size: 25px;
 	color: #fff;
@@ -6418,5 +6419,179 @@ main {
 
     .shop-detail .pd-title {
         font-size: 22px;
+    }
+}
+
+/* ========================================================
+   STATIC PRODUCT PAGES (tools/build-product-pages.js)
+   ======================================================== */
+.pd-jump {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    margin-top: 60px;
+}
+
+.pd-jump-inner {
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.pd-jump a {
+    display: inline-block;
+    padding: 16px 0 14px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #64748b;
+    border-bottom: 2px solid transparent;
+}
+
+.pd-jump a:hover,
+.pd-jump a:focus {
+    color: #2d3a4b;
+    border-bottom-color: #ffe115;
+    text-decoration: none;
+}
+
+.pd-block {
+    padding: 70px 0;
+    scroll-margin-top: 60px;
+}
+
+.pd-block-alt {
+    background: #f8fafc;
+    border-top: 1px solid #eef2f6;
+    border-bottom: 1px solid #eef2f6;
+}
+
+.pd-block-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+    margin: 0 0 10px;
+}
+
+.pd-block-lead {
+    font-size: 15px;
+    color: #64748b;
+    margin: 0 0 24px;
+}
+
+.pd-block-title + .europull-quick-specs,
+.pd-block-title + .europull-features-grid,
+.pd-block-title + .europull-standards-grid,
+.pd-block-title + .row {
+    margin-top: 24px;
+}
+
+.pd-block-note {
+    font-size: 13px;
+    color: #64748b;
+    margin: 0;
+}
+
+.pd-block-note a {
+    color: #2d3a4b;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.pd-overview {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 75ch;
+    margin: 0;
+}
+
+.pd-related-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pd-related-card {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.pd-related-card:hover,
+.pd-related-card:focus {
+    box-shadow: 0 12px 28px rgba(31, 41, 55, 0.08);
+    transform: translateY(-3px);
+    text-decoration: none;
+}
+
+.pd-related-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+    padding: 16px;
+}
+
+.pd-related-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.pd-related-body {
+    display: block;
+    padding: 14px 18px 18px;
+    border-top: 1px solid #eef2f6;
+}
+
+.pd-related-body strong {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+}
+
+.pd-related-cat {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.pd-related-spec {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 4px;
+}
+
+@media (max-width: 767px) {
+    .pd-block {
+        padding: 50px 0;
+    }
+
+    .pd-block-title {
+        font-size: 20px;
+    }
+
+    .pd-jump {
+        margin-top: 40px;
     }
 }
