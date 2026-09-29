@@ -792,3 +792,10 @@
     padding-bottom: 76px;
   }
 }
+
+/* Phone widths for flex rows (Bootstrap only sizes columns from 768px). */
+@media (max-width: 767px) {
+  .pl-equal-row > [class*="col-"] {
+    width: 100%;
+  }
+}

@@ -6595,3 +6595,16 @@ main {
         margin-top: 40px;
     }
 }
+
+/* Phone widths for related products (Bootstrap only sizes columns from 768px). */
+@media (max-width: 767px) {
+    .pd-related-row > [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .pd-related-row > [class*="col-"] {
+        width: 50%;
+    }
+}

@@ -1,0 +1,572 @@
+/* ========================================================
+   HOMEPAGE REFINEMENTS
+   Extends the existing homepage look (Swiper hero, centred
+   .heading titles, bordered .arrival-block grid, yellow
+   #ffe115 on charcoal #2d3a4b). Loaded only by index.html.
+   ======================================================== */
+
+/* ---------- Hero slider ---------- */
+.sw-caption .btn-main {
+    margin-right: 12px;
+}
+
+.btn-main.btn-outline {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    padding: 10px 28px;
+}
+
+.btn-main.btn-outline:hover,
+.btn-main.btn-outline:focus {
+    background: #ffe115;
+    border-color: #ffe115;
+    color: #111111;
+}
+
+.swiper {
+    --swiper-navigation-size: 18px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 52px;
+    height: 52px;
+    margin-top: -26px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    color: #ffffff;
+    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.swiper-button-prev {
+    left: 24px;
+}
+
+.swiper-button-next {
+    right: 24px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background: #ffe115;
+    border-color: #ffe115;
+    color: #2d3a4b;
+}
+
+.swiper-pagination-fraction {
+    bottom: 34px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.swiper-pagination-fraction .swiper-pagination-current {
+    color: #ffe115;
+}
+
+/* ---------- Trust strip under the slider ---------- */
+.home-trust {
+    background: #2d3a4b;
+    border-bottom: 3px solid #ffe115;
+}
+
+.home-trust ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.home-trust li {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 26px 22px;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.home-trust li:first-child {
+    border-left: none;
+    padding-left: 0;
+}
+
+.home-trust i {
+    font-size: 26px;
+    color: #ffe115;
+    width: 30px;
+    text-align: center;
+}
+
+.home-trust strong {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.home-trust span {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-top: 2px;
+}
+
+/* ---------- Brand philosophy pillars ---------- */
+.home-philosophy .heading {
+    margin-bottom: 50px;
+}
+
+.home-philosophy .heading p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    line-height: 26px;
+    color: #666666;
+}
+
+.home-pillars {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-pillar {
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+
+.home-pillar-icon {
+    width: 72px;
+    height: 72px;
+    line-height: 72px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: #ffe115;
+    color: #2d3a4b;
+    font-size: 26px;
+}
+
+.home-pillar h5 {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+    margin: 0 0 12px;
+}
+
+.home-pillar p {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 24px;
+    color: #666666;
+    margin: 0;
+}
+
+/* ---------- Featured products grid (existing .arrival-block) ---------- */
+/* Flex instead of floats so rows stay aligned when titles wrap. */
+.arrival-block {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.arrival-block .item {
+    float: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.arrival-block .item-media {
+    position: relative;
+    overflow: hidden;
+}
+
+.arrival-block .item .img-2 {
+    top: 0;
+}
+
+/* Title now sits under the photo instead of over the product. */
+.arrival-block .item-name {
+    position: relative;
+    bottom: auto;
+    flex-grow: 1;
+    padding: 22px 18px 26px;
+    background: #ffffff;
+    border-top: 1px solid #eef0f3;
+}
+
+.arrival-block .item-name a {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.arrival-block .item-spec {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    color: #666666;
+}
+
+.arrival-block .item-spec strong {
+    color: #2d3a4b;
+}
+
+.home-view-all {
+    text-align: center;
+    padding-top: 50px;
+}
+
+/* ---------- Specialist ranges band ---------- */
+.home-ranges {
+    background: #2d3a4b;
+}
+
+.home-ranges .heading span {
+    color: #cbd5e1;
+}
+
+.home-range {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+    background: #ffffff;
+    text-decoration: none !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-range:hover,
+.home-range:focus {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.35);
+}
+
+.home-range-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 16px;
+    background: #ffffff;
+}
+
+.home-range-img img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.home-range-img.is-photo {
+    padding: 0;
+}
+
+.home-range-img.is-photo img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+}
+
+.home-range-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 22px 22px 24px;
+    border-top: 3px solid #ffe115;
+}
+
+.home-range-link {
+    margin-top: auto;
+}
+
+.home-range-body h5 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+    margin: 0 0 8px;
+}
+
+.home-range-body p {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    line-height: 22px;
+    color: #666666;
+    margin: 0 0 16px;
+}
+
+.home-range-link {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2d3a4b;
+    border-bottom: 2px solid #ffe115;
+    padding-bottom: 2px;
+}
+
+.home-ranges-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ---------- Popular hardware carousel ---------- */
+.papular-block .price.add-to-quote {
+    cursor: pointer;
+}
+
+.papular-block .price.add-to-quote:hover {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.papular-block .owl-prev,
+.papular-block .owl-next {
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    margin-top: -20px;
+    border-radius: 50%;
+    border: 1px solid #2d3a4b;
+    color: #2d3a4b;
+    transition: background 0.2s ease;
+}
+
+.papular-block .owl-prev:hover,
+.papular-block .owl-next:hover {
+    background: #ffe115;
+    border-color: #ffe115;
+}
+
+/* ---------- About ---------- */
+.home-about-row {
+    display: flex;
+    align-items: center;
+}
+
+.home-about-img img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+}
+
+.home-about-text {
+    padding-left: 30px;
+}
+
+.home-about-text .heading {
+    margin-bottom: 26px;
+}
+
+.small-about .home-about-text p {
+    max-width: none;
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 26px;
+}
+
+.home-about-text .btn-main {
+    margin-top: 14px;
+}
+
+/* ---------- Closing quote band ---------- */
+.home-quote {
+    background: #ffe115;
+    padding: 60px 0;
+}
+
+.home-quote-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.home-quote h4 {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #2d3a4b;
+    margin: 0 0 10px;
+}
+
+.home-quote p {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    color: #2d3a4b;
+    margin: 0;
+}
+
+.home-quote-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.home-quote .btn-main {
+    background: #2d3a4b;
+    color: #ffffff;
+    border: 2px solid #2d3a4b;
+}
+
+.home-quote .btn-main:hover,
+.home-quote .btn-main:focus {
+    background: #ffffff;
+    border-color: #ffffff;
+    color: #2d3a4b;
+}
+
+.home-quote .btn-main.btn-outline {
+    background: transparent;
+    color: #2d3a4b;
+}
+
+.home-quote .btn-main.btn-outline:hover,
+.home-quote .btn-main.btn-outline:focus {
+    background: #2d3a4b;
+    color: #ffffff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .home-trust ul {
+        flex-wrap: wrap;
+    }
+
+    .home-trust li {
+        flex: 0 0 50%;
+    }
+
+    .home-trust li:nth-child(3) {
+        border-left: none;
+        padding-left: 0;
+    }
+
+    .home-about-row {
+        display: block;
+    }
+
+    .home-about-text {
+        padding: 30px 15px 0;
+    }
+
+    .slider-title {
+        font-size: 46px;
+    }
+}
+
+@media (max-width: 767px) {
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+    }
+
+    .sw-caption .btn-main {
+        margin-bottom: 10px;
+    }
+
+    .home-trust li {
+        padding: 18px 10px;
+        gap: 10px;
+    }
+
+    .home-trust strong {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    .home-trust span {
+        font-size: 12px;
+    }
+
+    .home-trust i {
+        font-size: 20px;
+    }
+
+    .home-pillar {
+        padding: 0 15px 20px;
+    }
+
+    /* Two columns on phones: one full-width photo per product made the grid very long. */
+    .arrival-block .item {
+        width: 50%;
+    }
+
+    .arrival-block .item-name {
+        padding: 14px 10px 18px;
+    }
+
+    .arrival-block .item-name a {
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .arrival-block .item-name p,
+    .arrival-block .item-spec {
+        font-size: 12px;
+    }
+
+    .home-about-img img {
+        height: 260px;
+    }
+
+    .home-quote h4 {
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+}
+
+/* Phone widths for the flex rows (Bootstrap only sizes columns from 768px). */
+@media (max-width: 767px) {
+    .home-pillars > [class*="col-"],
+    .home-ranges-row > [class*="col-"] {
+        width: 100%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .home-ranges-row > [class*="col-"] {
+        width: 50%;
+    }
+}
+
+/* Slider caption on phones: custom-slider.css has no mobile rules, so the
+   60px title overflowed and the caption sat against the screen edge. */
+@media (max-width: 767px) {
+    .sw-caption .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .sw-caption .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .slider-title {
+        font-size: 34px;
+        line-height: 1.15;
+    }
+
+    .slider-teaser {
+        font-size: 15px;
+    }
+
+    /* The carousel arrows sit outside the track and end up half off-screen; swipe instead. */
+    .papular-block .owl-prev,
+    .papular-block .owl-next {
+        display: none;
+    }
+}

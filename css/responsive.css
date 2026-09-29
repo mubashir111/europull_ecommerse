@@ -1211,3 +1211,81 @@ header .user-basket .dropdown-menu{
 }
 @media(max-height: 700px) {
 }
+
+/* Mobile header (<=767px): the navbar was a non-wrapping flex row, so the open
+   menu squeezed in between the hamburger and the cart/search icons, and from
+   541-767px the icons floated above the logo. Lay the header out as one flex
+   row, logo | cart + search | hamburger, with the menu on its own full-width line. */
+@media (max-width: 767px) {
+header .sticky .container {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: 8px 15px;
+}
+header .logo {
+	float: none;
+	width: auto;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+}
+header .logo:before,
+header .logo:after {
+	display: none;
+}
+header .logo img {
+	max-width: 170px;
+	display: block;
+}
+.nav-right {
+	position: static;
+	float: none;
+	top: auto;
+	right: auto;
+	left: auto;
+	transform: none;
+	margin: 0 8px 0 0;
+	display: flex;
+	align-items: center;
+}
+.nav-right .navbar-right {
+	display: flex;
+	align-items: center;
+	margin: 0;
+}
+.navbar-toggle {
+	position: static;
+	float: none;
+	top: auto;
+	right: auto;
+	transform: none;
+	margin: 0;
+}
+header .navbar {
+	display: contents;
+}
+header .logo {
+	order: 1;
+	margin-right: auto;
+}
+.nav-right {
+	order: 2;
+}
+header .navbar-header {
+	order: 3;
+}
+header .navbar-collapse {
+	order: 4;
+	flex-basis: 100%;
+	width: 100%;
+	margin: 8px -15px 0;
+	padding: 0 15px;
+	border-top: 1px solid #eee;
+}
+}
+@media (max-width: 540px) {
+header .logo img {
+	max-width: 130px;
+}
+}

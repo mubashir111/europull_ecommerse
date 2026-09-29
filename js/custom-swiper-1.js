@@ -1,15 +1,17 @@
 const swiper = new Swiper('.swiper', {
 
+  // Long enough to read a slide; pauses while the visitor is interacting.
   autoplay: {
-     delay: 3000,
-     disableOnInteraction: false
+     delay: 6000,
+     disableOnInteraction: false,
+     pauseOnMouseEnter: true
    },
 
   // Optional parameters
   direction: 'horizontal',
   slidesPerView: 1,
   loop: true,
-  speed: 1200,
+  speed: 900,
   mousewheel: false,
   watchSlidesProgress: true,
   parallax: true,
