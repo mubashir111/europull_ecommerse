@@ -20,7 +20,7 @@
   <meta property="og:url" content="https://europull.com/heavy-duty-europull-winches-in-saudi-arabia.html">
   <meta property="og:title" content="Heavy-Duty Industrial Winches | Europull Hebentechnik UK Ltd">
   <meta property="og:description" content="Discover premium hydraulic and electric winches by Europull Hebentechnik UK Ltd. Engineered for extreme marine, mining, and oilfield environments globally.">
-  <meta property="og:image" content="images/Onshore/Europull HWE 300 heavy-duty industrial hydraulic winch mounted on machinery in a rugged environment - Onshore.jpg">
+  <meta property="og:image" content="https://europull.com/images/products/europull-hwv-15000-winch-recovery-truck-cover.jpg">
 
   <!-- Favicons & Google Search Icons (Multiple of 48px square for Google Search) -->
   <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192x192.png">
@@ -95,9 +95,10 @@
   <style>
     /* Hero Banner Redesign (High-Duty Industrial Winches) */
     .winch-hero-banner {
-      background: linear-gradient(135deg, #131c26 0%, #1e293b 50%, #111822 100%);
+      background: #131c26 url("images/products/europull-hwv-15000-winch-recovery-truck-cover.jpg") 65% center / cover no-repeat;
       position: relative;
-      padding: 65px 0 55px;
+      padding: 110px 0 100px;
+      min-height: 560px;
       overflow: hidden;
       border-bottom: 3px solid #ffe115;
     }
@@ -108,8 +109,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: radial-gradient(circle at 75% 50%, rgba(255, 225, 21, 0.1) 0%, transparent 60%),
-                  radial-gradient(circle at 20% 20%, rgba(45, 58, 75, 0.6) 0%, transparent 70%);
+      background: linear-gradient(90deg, rgba(13, 19, 28, 0.92) 0%, rgba(13, 19, 28, 0.78) 36%, rgba(13, 19, 28, 0.12) 62%, rgba(13, 19, 28, 0) 85%);
       pointer-events: none;
     }
     .winch-hero-row {
@@ -241,6 +241,12 @@
     .winch-hero-img:hover {
       transform: scale(1.03);
     }
+    .winch-hero-caption {
+      position: absolute;
+      right: 30px;
+      bottom: 24px;
+      z-index: 3;
+    }
     .winch-model-tag {
       position: relative;
       z-index: 2;
@@ -287,7 +293,9 @@
     @media (max-width: 767px) {
       .heading span { width: 95%; }
       .winch-hero-title { font-size: 24px; line-height: 32px; }
-      .winch-hero-banner { padding: 45px 0 40px; }
+      .winch-hero-banner { padding: 50px 0 40px; min-height: 0; background-position: 72% center; }
+      .winch-hero-banner:before { background: rgba(13, 19, 28, 0.82); }
+      .winch-hero-caption { display: none; }
       .winch-hero-img { max-height: 220px; }
     }
 
@@ -584,6 +592,71 @@
       border-radius: 3px;
       border: 1px solid #e2e8f0;
     }
+
+    /* Full model datasheets accordion */
+    .winch-ds-series {
+      float: right;
+      font-size: 11px;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-right: 25px;
+      margin-top: 2px;
+    }
+    .winch-ds-h6 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2d3a4b;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 5px 0 12px;
+    }
+    .winch-ds-spec-table {
+      font-size: 12px;
+      background: #fff;
+      margin-bottom: 20px;
+    }
+    .winch-ds-spec-table > tbody > tr > td {
+      padding: 7px 10px;
+      vertical-align: top;
+      color: #334155;
+    }
+    .winch-ds-spec-table > tbody > tr > td:first-child {
+      width: 42%;
+      font-weight: 700;
+      color: #2d3a4b;
+      background: #f8fafc;
+    }
+    .winch-ds-perf-table {
+      font-size: 12px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      margin-bottom: 0;
+    }
+    .winch-ds-perf-table > thead > tr > th {
+      background: #2d3a4b;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 8px 10px;
+      border-bottom: 2px solid #ffe115;
+      white-space: nowrap;
+    }
+    .winch-ds-perf-table > tbody > tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .winch-ds-perf-table > tbody > tr > td {
+      padding: 8px 10px;
+      white-space: nowrap;
+      border-top: 1px solid #edf2f7;
+      color: #334155;
+    }
+    @media (max-width: 767px) {
+      .winch-ds-series { display: none; }
+    }
   </style>
 
   <!-- Google Tag Manager -->
@@ -692,7 +765,7 @@
       <div class="container">
         <div class="row winch-hero-row">
           <!-- Left Column: Content & Engineering Creds -->
-          <div class="col-md-7 col-sm-12 winch-hero-col-left">
+          <div class="col-md-7 col-lg-6 col-sm-12 winch-hero-col-left">
             <div class="winch-hero-content">
               <div class="winch-hero-badge">
                 <span class="badge-dot"></span> Europull Hebentechnik UK Ltd &bull; Since 1940
@@ -704,9 +777,9 @@
               
               <!-- Key Series Badges -->
               <div class="winch-hero-highlights">
-                <span class="hero-chip"><i class="fa fa-cogs"></i> Hydraulic (10T - 15T)</span>
-                <span class="hero-chip"><i class="fa fa-bolt"></i> 24V DC Electric (Up to 25T)</span>
-                <span class="hero-chip"><i class="fa fa-tint"></i> IP67 Marine Grade</span>
+                <span class="hero-chip"><i class="fa fa-cogs"></i> Hydraulic up to 30t (66,000 lbs)</span>
+                <span class="hero-chip"><i class="fa fa-bolt"></i> 24V DC Electric up to 11.3t (25,000 lbs)</span>
+                <span class="hero-chip"><i class="fa fa-tint"></i> IP67 Waterproof</span>
               </div>
 
               <!-- Clean Breadcrumb -->
@@ -717,18 +790,14 @@
               </ol>
             </div>
           </div>
+        </div>
+      </div>
 
-          <!-- Right Column: Hero Winch Visual -->
-          <div class="col-md-5 col-sm-12 winch-hero-col-right">
-            <div class="winch-hero-visual">
-              <div class="winch-hero-glow"></div>
-              <img src="images/Onshore/Product Images/HWV-15000.png" alt="Europull HWV 15000 Heavy-Duty Hydraulic Winch" class="img-responsive winch-hero-img">
-              <div class="winch-model-tag">
-                <span class="model-name">HWV 15000</span>
-                <span class="model-spec">15,000 kg Heavy-Duty Series</span>
-              </div>
-            </div>
-          </div>
+      <!-- Caption for the winch in the cover photo -->
+      <div class="winch-hero-caption">
+        <div class="winch-model-tag">
+          <span class="model-name">HWV 15000</span>
+          <span class="model-spec">15,000 lbs (6,804 kg) Hydraulic &bull; Recovery Truck Install</span>
         </div>
       </div>
     </section>
@@ -761,6 +830,7 @@
                 <a href="contact.html" class="btn-europull-primary">Get a Quote</a>
                 <a href="#series-breakdown" class="btn-europull-secondary">Explore Winch Series</a>
                 <a href="pdf/europull.pdf" target="_blank" class="btn-europull-pdf"><i class="fa fa-file-pdf-o"></i> Download Catalog</a>
+                <a href="pdf/europull-winch-datasheets.pdf" target="_blank" class="btn-europull-pdf"><i class="fa fa-file-pdf-o"></i> Winch Datasheets</a>
               </div>
             </div>
 
@@ -927,10 +997,11 @@
                   <p>Ideal for standard commercial recovery and mid-weight industrial tasks.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Power:</span> <strong>Hydraulic PTO</strong></div>
-                    <div class="spec-item"><span>Gearbox:</span> <strong>Planetary Steel</strong></div>
-                    <div class="spec-item"><span>Braking:</span> <strong>Wet-Type Hydraulic</strong></div>
-                    <div class="spec-item"><span>Ingress:</span> <strong>IP67 Waterproof</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>15 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>15&ndash;60 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>17.6:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;10.2mm &times; 25.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>51 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -955,10 +1026,11 @@
                   <p>Enhanced towing capabilities for recovery flatbeds and vehicle transporters.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Power:</span> <strong>Hydraulic PTO</strong></div>
-                    <div class="spec-item"><span>Gearbox:</span> <strong>Planetary Steel</strong></div>
-                    <div class="spec-item"><span>Braking:</span> <strong>Wet-Type Hydraulic</strong></div>
-                    <div class="spec-item"><span>Ingress:</span> <strong>IP67 Waterproof</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>11 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>15&ndash;45 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>28:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;10.2mm &times; 25.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>42.8 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -983,10 +1055,11 @@
                   <p>Designed for severe-duty recovery and heavy equipment handling.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Power:</span> <strong>Hydraulic PTO</strong></div>
-                    <div class="spec-item"><span>Gearbox:</span> <strong>Planetary Steel</strong></div>
-                    <div class="spec-item"><span>Braking:</span> <strong>Wet-Type Hydraulic</strong></div>
-                    <div class="spec-item"><span>Ingress:</span> <strong>IP67 Waterproof</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>17.5 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>15&ndash;60 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>17.3:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;12mm &times; 26.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>83.6 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1026,9 +1099,11 @@
                   <p>Rated line pull for demanding industrial site work.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>System:</span> <strong>Industrial Hydraulic</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>2-Stage Alloy</strong></div>
-                    <div class="spec-item"><span>Clutch:</span> <strong>Air &amp; Manual</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>16 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>15&ndash;75 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>37.8:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;18mm &times; 40m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>340 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1053,9 +1128,11 @@
                   <p>Rated line pull for handling heavy machinery and materials.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>System:</span> <strong>Industrial Hydraulic</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>2-Stage Alloy</strong></div>
-                    <div class="spec-item"><span>Clutch:</span> <strong>Air &amp; Manual</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>20 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>10&ndash;120 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>40.6:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;22mm &times; 40m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>400 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1080,9 +1157,11 @@
                   <p>Rated line pull for heavy marine and contracting operations.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>System:</span> <strong>Industrial Hydraulic</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>2-Stage Alloy</strong></div>
-                    <div class="spec-item"><span>Clutch:</span> <strong>Air &amp; Manual</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>20 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>10&ndash;120 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>36:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;26mm &times; 40m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>505 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1107,9 +1186,11 @@
                   <p>Rated line pull for the most extreme heavy transport and energy sector requirements.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>System:</span> <strong>Industrial Hydraulic</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>2-Stage Alloy</strong></div>
-                    <div class="spec-item"><span>Clutch:</span> <strong>Air &amp; Manual</strong></div>
+                    <div class="spec-item"><span>Pressure:</span> <strong>16 MPa</strong></div>
+                    <div class="spec-item"><span>Oil Flow:</span> <strong>10&ndash;120 L/min</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>53:1</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;32mm &times; 40m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>930 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-accent add-to-quote"
@@ -1149,9 +1230,11 @@
                   <p>Rated line pull for standard heavy-duty vehicle mounting.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Motor:</span> <strong>24V DC Series</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>3-Stage Steel</strong></div>
-                    <div class="spec-item"><span>Brake:</span> <strong>Patented Ratchet</strong></div>
+                    <div class="spec-item"><span>Motor:</span> <strong>24V DC, 4.8 kW in / 3.1 kW out</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>228:1</strong></div>
+                    <div class="spec-item"><span>Clutch:</span> <strong>Rotary</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;10.2mm &times; 25.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>44.1 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1176,9 +1259,11 @@
                   <p>Rated line pull for upgraded transport needs.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Motor:</span> <strong>24V DC Series</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>3-Stage Steel</strong></div>
-                    <div class="spec-item"><span>Brake:</span> <strong>Patented Ratchet</strong></div>
+                    <div class="spec-item"><span>Motor:</span> <strong>24V DC, 6.1 kW in / 3.1 kW out</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>370:1</strong></div>
+                    <div class="spec-item"><span>Brake:</span> <strong>Patented ratchet</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;12mm &times; 26.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>67 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1203,9 +1288,11 @@
                   <p>Rated line pull, balancing high electrical efficiency with commercial strength.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Motor:</span> <strong>24V DC Series</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>3-Stage Steel</strong></div>
-                    <div class="spec-item"><span>Brake:</span> <strong>Patented Ratchet</strong></div>
+                    <div class="spec-item"><span>Motor:</span> <strong>24V DC, 6.1 kW in / 3.1 kW out</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>370:1</strong></div>
+                    <div class="spec-item"><span>Brake:</span> <strong>Patented ratchet</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;12mm &times; 26.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>70 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-primary add-to-quote"
@@ -1230,9 +1317,11 @@
                   <p>Rated line pull for maximum 24V DC performance.</p>
                   
                   <div class="winch-prod-specs">
-                    <div class="spec-item"><span>Motor:</span> <strong>24V DC Series</strong></div>
-                    <div class="spec-item"><span>Gear:</span> <strong>3-Stage Steel</strong></div>
-                    <div class="spec-item"><span>Brake:</span> <strong>Patented Ratchet</strong></div>
+                    <div class="spec-item"><span>Motor:</span> <strong>24V DC, 6.1 kW in / 3.1 kW out</strong></div>
+                    <div class="spec-item"><span>Gear Ratio:</span> <strong>450:1</strong></div>
+                    <div class="spec-item"><span>Brake:</span> <strong>Patented ratchet</strong></div>
+                    <div class="spec-item"><span>Cable:</span> <strong>&Oslash;13.8mm &times; 26.5m</strong></div>
+                    <div class="spec-item"><span>Net Weight:</span> <strong>99.5 kg</strong></div>
                   </div>
 
                   <a href="javascript:void(0);" class="btn-europull-accent add-to-quote"
@@ -1271,6 +1360,9 @@
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Power / Motor</th>
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Braking System</th>
                   <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Ingress</th>
+                  <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Gear Ratio</th>
+                  <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Cable (Dia&times;L)</th>
+                  <th style="padding: 12px 15px; color: #fff; font-size: 12px; letter-spacing: 1px; text-transform: uppercase;">Net Weight</th>
                 </tr>
               </thead>
               <tbody>
@@ -1282,6 +1374,9 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">17.6:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;10.2mm &times; 25.5m</td>
+                  <td style="padding: 10px 14px;">51 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWV 12000</td>
@@ -1291,6 +1386,9 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">28:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;10.2mm &times; 25.5m</td>
+                  <td style="padding: 10px 14px;">42.8 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWV 15000</td>
@@ -1300,6 +1398,9 @@
                   <td style="padding: 10px 14px;">Hydraulic PTO</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">17.3:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;12mm &times; 26.5m</td>
+                  <td style="padding: 10px 14px;">83.6 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 100</td>
@@ -1309,6 +1410,9 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">37.8:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;18mm &times; 40m</td>
+                  <td style="padding: 10px 14px;">340 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 150</td>
@@ -1318,6 +1422,9 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">40.6:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;22mm &times; 40m</td>
+                  <td style="padding: 10px 14px;">400 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">HWE 200</td>
@@ -1327,6 +1434,9 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">36:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;26mm &times; 40m</td>
+                  <td style="padding: 10px 14px;">505 kg</td>
                 </tr>
                 <tr style="background: #fefce8;">
                   <td style="padding: 10px 14px; font-weight: bold; color: #b45309;">HWE 300 (Flagship)</td>
@@ -1336,6 +1446,9 @@
                   <td style="padding: 10px 14px;">Industrial Hydraulic</td>
                   <td style="padding: 10px 14px;">Wet-Type Multi-Disc</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">53:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;32mm &times; 40m</td>
+                  <td style="padding: 10px 14px;">930 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 12500</td>
@@ -1345,6 +1458,9 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">228:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;10.2mm &times; 25.5m</td>
+                  <td style="padding: 10px 14px;">44.1 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 18000</td>
@@ -1354,6 +1470,9 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">370:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;12mm &times; 26.5m</td>
+                  <td style="padding: 10px 14px;">67 kg</td>
                 </tr>
                 <tr>
                   <td style="padding: 10px 14px; font-weight: bold; color: #2d3a4b;">EWB 20000</td>
@@ -1363,6 +1482,9 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">370:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;12mm &times; 26.5m</td>
+                  <td style="padding: 10px 14px;">70 kg</td>
                 </tr>
                 <tr style="background: #fefce8;">
                   <td style="padding: 10px 14px; font-weight: bold; color: #b45309;">EWB 25000 (Top Electric)</td>
@@ -1372,9 +1494,1297 @@
                   <td style="padding: 10px 14px;">24V DC Series Wound</td>
                   <td style="padding: 10px 14px;">Patented Ratchet</td>
                   <td style="padding: 10px 14px;">IP67 Sealed</td>
+                  <td style="padding: 10px 14px;">450:1</td>
+                  <td style="padding: 10px 14px; white-space: nowrap;">&Oslash;13.8mm &times; 26.5m</td>
+                  <td style="padding: 10px 14px;">99.5 kg</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          <!-- FULL MODEL DATASHEETS (from the factory datasheet PDF) -->
+          <div class="margin-top-50">
+            <div class="heading text-center">
+              <h2 style="font-size: 20px;">Full Model Datasheets</h2>
+              <span>Complete factory specifications and first-layer performance data for every model</span>
+            </div>
+
+            <div class="text-center" style="margin-bottom: 30px;">
+              <a href="pdf/europull-winch-datasheets.pdf" target="_blank" class="btn-europull-pdf"><i class="fa fa-file-pdf-o"></i> Download Winch Datasheets (PDF)</a>
+            </div>
+
+            <div class="row">
+              <div class="col-md-10 center-block">
+                <div class="panel-group europull-theme-faq" id="winchDatasheets">
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwv-10000">
+                        HWV 10000 &mdash; 10,000 lbs (4,536 kg) <span class="winch-ds-series">HWV Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwv-10000" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>10,000 lbs (4,536 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Standard</td>
+                              <td>European EN</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>100 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>15~60 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>15 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>Planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>17.6:1</td>
+                            </tr>
+                            <tr>
+                              <td>Clutch</td>
+                              <td>Air, manual, air &amp; manual optional</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;13/32" &times; 83.7' (&Oslash;10.2mm &times; 25.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;4.0" &times; 10.0" (&Oslash;102mm &times; 253mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>14.7" &times; 4.5" (374.2mm &times; 114.3mm)<br>11.5" &times; 6.7" (291.6mm &times; 171.2mm) 8-M10</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>112.4 lbs / 51 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>3.0 (435.1)</td>
+                                <td>1.3 (5)</td>
+                                <td>3.0 (0.9)</td>
+                                <td>1 / 10000 (4536)</td>
+                              </tr>
+                              <tr>
+                                <td>4000 (1814)</td>
+                                <td>6.8 (986.2)</td>
+                                <td>2.6 (10)</td>
+                                <td>5.9 (1.8)</td>
+                                <td>2 / 7355 (3336)</td>
+                              </tr>
+                              <tr>
+                                <td>6000 (2722)</td>
+                                <td>9.2 (1334.3)</td>
+                                <td>5.2 (20)</td>
+                                <td>11.8 (3.6)</td>
+                                <td>3 / 6780 (3075)</td>
+                              </tr>
+                              <tr>
+                                <td>8000 (3629)</td>
+                                <td>12.0 (1740.4)</td>
+                                <td>10.4 (40)</td>
+                                <td>23.6 (7.2)</td>
+                                <td>4 / 5711 (2591)</td>
+                              </tr>
+                              <tr>
+                                <td>10000 (4536)</td>
+                                <td>15.0 (2175)</td>
+                                <td>15.6 (60)</td>
+                                <td>36.1 (11)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwv-12000">
+                        HWV 12000 &mdash; 12,000 lbs (5,443 kg) <span class="winch-ds-series">HWV Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwv-12000" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>12,000 lbs (5,443 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>65 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>15~45 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>11 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>28:1</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;13/32" &times; 83.7' (&Oslash;10.2mm &times; 25.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;2.48" &times; 8.45" (&Oslash;63mm &times; 217mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>10" &times; 4.5" (254mm &times; 114.3mm) 4-M12</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>94 lbs / 42.8 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>2.0 (290.1)</td>
+                                <td>1.3 (5)</td>
+                                <td>1.6 (0.5)</td>
+                                <td>1 / 12000 (5443)</td>
+                              </tr>
+                              <tr>
+                                <td>3000 (1361)</td>
+                                <td>3.3 (478.6)</td>
+                                <td>2.6 (10)</td>
+                                <td>3.6 (1.1)</td>
+                                <td>2 / 9563 (4338)</td>
+                              </tr>
+                              <tr>
+                                <td>6000 (2722)</td>
+                                <td>7.2 (1044.2)</td>
+                                <td>5.2 (20)</td>
+                                <td>7.5 (2.3)</td>
+                                <td>3 / 7949 (3606)</td>
+                              </tr>
+                              <tr>
+                                <td>9000 (4082)</td>
+                                <td>9.2 (1344.3)</td>
+                                <td>9.2 (35)</td>
+                                <td>13.1 (4.0)</td>
+                                <td>4 / 6801 (3085)</td>
+                              </tr>
+                              <tr>
+                                <td>12000 (5443)</td>
+                                <td>11.0 (1595.4)</td>
+                                <td>11.9 (45)</td>
+                                <td>17.4 (5.3)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwv-15000">
+                        HWV 15000 &mdash; 15,000 lbs (6,804 kg) <span class="winch-ds-series">HWV Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwv-15000" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>15,000 lbs (6,804 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Standard</td>
+                              <td>European EN</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>160 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>15~60 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>17.5 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>Planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>17.3:1</td>
+                            </tr>
+                            <tr>
+                              <td>Clutch</td>
+                              <td>Air, manual, air &amp; manual optional</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;15/32" &times; 86.9' (&Oslash;12mm &times; 26.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;5.0" &times; 10.5" (&Oslash;127mm &times; 266mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>12.0" &times; 4.5" (303.5mm &times; 114.3mm)<br>14.5" &times; 6.7" (368.5mm &times; 171.2mm) 8-M12</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>184.3 lbs / 83.6 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>2.0 (290)</td>
+                                <td>2.6 (10)</td>
+                                <td>4.2 (1.3)</td>
+                                <td>1 / 15000 (6804)</td>
+                              </tr>
+                              <tr>
+                                <td>8000 (3629)</td>
+                                <td>9.2 (1337)</td>
+                                <td>5.2 (20)</td>
+                                <td>8.5 (2.6)</td>
+                                <td>2 / 12791 (5807)</td>
+                              </tr>
+                              <tr>
+                                <td>10000 (4536)</td>
+                                <td>11.5 (1627)</td>
+                                <td>7.9 (30)</td>
+                                <td>12.4 (3.8)</td>
+                                <td>3 / 11150 (5062)</td>
+                              </tr>
+                              <tr>
+                                <td>12000 (5448)</td>
+                                <td>14.0 (2030)</td>
+                                <td>10.4 (40)</td>
+                                <td>16.7 (5.1)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                              <tr>
+                                <td>15000 (6810)</td>
+                                <td>17.5 (2537)</td>
+                                <td>15.6 (60)</td>
+                                <td>23 (7.0)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwe-100">
+                        HWE 100 &mdash; 22,000 lbs (10,000 kg) <span class="winch-ds-series">HWE Industrial Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwe-100" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>22,000 lbs (10,000 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>200 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>15~75 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>16 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>2-stage planetary alloy gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>37.8:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;5/7" &times; 131' (&Oslash;18mm &times; 40m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;7.46" &times; 13.39" (&Oslash;189.5mm &times; 340mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>20.55" &times; 7.09" &times; 11.02" (522mm &times; 180mm &times; 280mm) 8-M20</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>340 kg</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>3.5 (507.5)</td>
+                                <td>4.0 (15)</td>
+                                <td>4.3 (1.3)</td>
+                                <td>1 / 22000 (10000)</td>
+                              </tr>
+                              <tr>
+                                <td>14500 (6577)</td>
+                                <td>7 (1015)</td>
+                                <td>10.6 (40)</td>
+                                <td>10.8 (3.3)</td>
+                                <td>2 / 18700 (8482)</td>
+                              </tr>
+                              <tr>
+                                <td>16300 (7394)</td>
+                                <td>10.5 (1522.5)</td>
+                                <td>13.2 (50)</td>
+                                <td>13.5 (4.1)</td>
+                                <td>3 / 16300 (7394)</td>
+                              </tr>
+                              <tr>
+                                <td>18700 (8482)</td>
+                                <td>14 (2030)</td>
+                                <td>15.9 (60)</td>
+                                <td>15.8 (4.8)</td>
+                                <td>4 / 14500 (6577)</td>
+                              </tr>
+                              <tr>
+                                <td>22000 (10000)</td>
+                                <td>16 (2320)</td>
+                                <td>19.8 (75)</td>
+                                <td>20.0 (6.1)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwe-150">
+                        HWE 150 &mdash; 33,000 lbs (15,000 kg) <span class="winch-ds-series">HWE Industrial Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwe-150" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>33,000 lbs (15,000 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>250 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>10~120 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>20 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>2-stage planetary alloy gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>40.6:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;7/8" &times; 131' (&Oslash;22mm &times; 40m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;8.27" &times; 13.39" (&Oslash;210mm &times; 340mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>20.55" &times; 7.09" &times; 11.02" (522mm &times; 180mm &times; 280mm) 8-M20</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>400 kg</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>4 (580.2)</td>
+                                <td>5.3 (20)</td>
+                                <td>4.3 (1.3)</td>
+                                <td>1 / 33000 (15000)</td>
+                              </tr>
+                              <tr>
+                                <td>21000 (9526)</td>
+                                <td>10 (1450.4)</td>
+                                <td>15.9 (60)</td>
+                                <td>13.8 (4.2)</td>
+                                <td>2 / 27700 (12565)</td>
+                              </tr>
+                              <tr>
+                                <td>23900 (10841)</td>
+                                <td>12 (1740.5)</td>
+                                <td>21.1 (80)</td>
+                                <td>18 (5.5)</td>
+                                <td>3 / 23900 (10841)</td>
+                              </tr>
+                              <tr>
+                                <td>27700 (12565)</td>
+                                <td>15 (2175.6)</td>
+                                <td>26.4 (100)</td>
+                                <td>22.6 (6.9)</td>
+                                <td>4 / 21000 (9526)</td>
+                              </tr>
+                              <tr>
+                                <td>33000 (15000)</td>
+                                <td>18 (2610.7)</td>
+                                <td>33 (125)</td>
+                                <td>27.9 (8.5)</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwe-200">
+                        HWE 200 &mdash; 44,000 lbs (20,000 kg) <span class="winch-ds-series">HWE Industrial Hydraulic</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwe-200" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>44,000 lbs (20,000 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>315 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>10~120 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>20 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>2-stage planetary alloy gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>36:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;1.02" &times; 131' (&Oslash;26mm &times; 40m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;8.27" &times; 13.39" (&Oslash;210mm &times; 340mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>20.94" &times; 6.3" &times; 11.02" (532mm &times; 160mm &times; 280mm) 8-M24</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>505 kg</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>7.5 (1087.8)</td>
+                                <td>5.3 (20)</td>
+                                <td>3.3 (1.0)</td>
+                                <td>1 / 44000 (20000)</td>
+                              </tr>
+                              <tr>
+                                <td>22000 (10000)</td>
+                                <td>10 (1450.4)</td>
+                                <td>13.2 (50)</td>
+                                <td>8.9 (2.7)</td>
+                                <td>2 / 36128 (16388)</td>
+                              </tr>
+                              <tr>
+                                <td>33000 (15000)</td>
+                                <td>15 (2175.6)</td>
+                                <td>22.5 (85)</td>
+                                <td>15.4 (4.7)</td>
+                                <td>3 / 30600 (13882)</td>
+                              </tr>
+                              <tr>
+                                <td>44000 (20000)</td>
+                                <td>20 (2900.8)</td>
+                                <td>31.7 (120)</td>
+                                <td>23.0 (7.0)</td>
+                                <td>4 / 26543 (12040)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-hwe-300">
+                        HWE 300 &mdash; 66,000 lbs (30,000 kg) <span class="winch-ds-series">HWE Industrial Hydraulic &bull; Flagship</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-hwe-300" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>66,000 lbs (30,000 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor displacement</td>
+                              <td>500 ml/r</td>
+                            </tr>
+                            <tr>
+                              <td>Oil flow</td>
+                              <td>10~120 L/min</td>
+                            </tr>
+                            <tr>
+                              <td>Pressure</td>
+                              <td>16 MPa</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Wet-type hydraulic brake</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>2-stage planetary alloy gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>53:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;1.26" &times; 131' (&Oslash;32mm &times; 40m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;10.63" &times; 14.2" (&Oslash;270mm &times; 360mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>24" &times; 6.7" &times; 11.2" (610mm &times; 170mm &times; 310mm) 8-M27</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>930 kg</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Pressure<br>MPa (psi)</th>
+                                <th>Flow<br>gal/min (L/min)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>7 (1015.3)</td>
+                                <td>5.3 (20)</td>
+                                <td>2.0 (0.6)</td>
+                                <td>1 / 66000 (30000)</td>
+                              </tr>
+                              <tr>
+                                <td>44000 (20000)</td>
+                                <td>11 (1595.4)</td>
+                                <td>13.2 (50)</td>
+                                <td>5.2 (1.6)</td>
+                                <td>2 / 54572 (24754)</td>
+                              </tr>
+                              <tr>
+                                <td>55000 (25000)</td>
+                                <td>14 (2030.5)</td>
+                                <td>22.5 (85)</td>
+                                <td>9.8 (3.0)</td>
+                                <td>3 / 46450 (21070)</td>
+                              </tr>
+                              <tr>
+                                <td>66000 (30000)</td>
+                                <td>16 (2320.6)</td>
+                                <td>31.7 (120)</td>
+                                <td>13.5 (4.1)</td>
+                                <td>4 / 40432 (18340)</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-ewb-12500">
+                        EWB 12500 &mdash; 12,500 lbs (5,670 kg) <span class="winch-ds-series">EWB 24V DC Electric</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-ewb-12500" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>12,500 lbs (5,670 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor</td>
+                              <td>Series wound, 24V &mdash; Input: 4.8kW/6.4hp; Output: 3.1kW/4.2hp</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Ratchet</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>3-stage planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>228:1</td>
+                            </tr>
+                            <tr>
+                              <td>Clutch</td>
+                              <td>Rotary</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;13/32" &times; 83.7' (&Oslash;10.2mm &times; 25.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;2.48" &times; 8.5" (&Oslash;63mm &times; 217mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>10" &times; 4.5" (254mm &times; 114.3mm) 4-M10</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>97.2 lbs / 44.1 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">24V DC Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Motor Current</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>32.8 (10.0)</td>
+                                <td>75 amps</td>
+                                <td>1 / 12500 (5670)</td>
+                              </tr>
+                              <tr>
+                                <td>3000 (1361)</td>
+                                <td>15.7 (4.8)</td>
+                                <td>190 amps</td>
+                                <td>2 / 9776 (4434)</td>
+                              </tr>
+                              <tr>
+                                <td>6000 (2722)</td>
+                                <td>11.5 (3.5)</td>
+                                <td>285 amps</td>
+                                <td>3 / 8026 (3641)</td>
+                              </tr>
+                              <tr>
+                                <td>9000 (4082)</td>
+                                <td>8.2 (2.5)</td>
+                                <td>360 amps</td>
+                                <td>4 / 6808 (3088)</td>
+                              </tr>
+                              <tr>
+                                <td>12500 (5670)</td>
+                                <td>5.2 (1.6)</td>
+                                <td>490 amps</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-ewb-18000">
+                        EWB 18000 &mdash; 18,000 lbs (8,165 kg) <span class="winch-ds-series">EWB 24V DC Electric</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-ewb-18000" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>18,000 lbs (8,165 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor</td>
+                              <td>Series wound, 24V &mdash; Input: 6.1kW/8.2hp; Output: 3.1kW/4.2hp</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Patented ratchet</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>3-stage planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>370:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;15/32" &times; 87' (&Oslash;12mm &times; 26.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;3.46" &times; 8.43" (&Oslash;88mm &times; 214mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>10" &times; 4.5" (254mm &times; 114.3mm)<br>10" &times; 6.5" (254mm &times; 165.1mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>147.7 lbs / 67 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">24V DC Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Motor Current</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>26.2 (8.0)</td>
+                                <td>60 amps</td>
+                                <td>1 / 18000 (8165)</td>
+                              </tr>
+                              <tr>
+                                <td>6000 (2722)</td>
+                                <td>10.5 (3.2)</td>
+                                <td>180 amps</td>
+                                <td>2 / 14516 (6584)</td>
+                              </tr>
+                              <tr>
+                                <td>10000 (4536)</td>
+                                <td>7.87 (2.4)</td>
+                                <td>260 amps</td>
+                                <td>3 / 12162 (5516)</td>
+                              </tr>
+                              <tr>
+                                <td>14000 (6350)</td>
+                                <td>6.56 (2.0)</td>
+                                <td>320 amps</td>
+                                <td>4 / 10465 (4747)</td>
+                              </tr>
+                              <tr>
+                                <td>18000 (8165)</td>
+                                <td>4.92 (1.5)</td>
+                                <td>360 amps</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-ewb-20000">
+                        EWB 20000 &mdash; 20,000 lbs (9,072 kg) <span class="winch-ds-series">EWB 24V DC Electric</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-ewb-20000" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>20,000 lbs (9,072 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor</td>
+                              <td>Series wound, 24V &mdash; Input: 6.1kW/8.2hp; Output: 3.1kW/4.2hp</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Patented ratchet</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>3-stage planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>370:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;15/32" &times; 87' (&Oslash;12mm &times; 26.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;3.46" &times; 8.43" (&Oslash;88mm &times; 214mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>10" &times; 4.5" (254mm &times; 114.3mm)<br>10" &times; 6.5" (254mm &times; 165.1mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>154.3 lbs / 70 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">Performance Specs (first layer)</h6>
+                        <p style="font-size: 13px; line-height: 22px; color: #666;">The model-specific first-layer pull chart for the EWB 20000 is available on request &mdash; email <a href="mailto:info@europull.com">info@europull.com</a> for the full performance data.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title">
+                      <a class="collapsed" data-toggle="collapse" data-parent="#winchDatasheets" href="#ds-ewb-25000">
+                        EWB 25000 &mdash; 25,000 lbs (11,340 kg) <span class="winch-ds-series">EWB 24V DC Electric &bull; Top Electric</span>
+                      </a>
+                    </h4>
+                  </div>
+                  <div id="ds-ewb-25000" class="panel-collapse collapse">
+                    <div class="panel-body">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <h6 class="winch-ds-h6">Specifications</h6>
+                          <table class="table table-bordered winch-ds-spec-table">
+                            <tbody>
+                            <tr>
+                              <td>Rated line pull</td>
+                              <td>25,000 lbs (11,340 kgs)</td>
+                            </tr>
+                            <tr>
+                              <td>Motor</td>
+                              <td>Series wound, 24V &mdash; Input: 6.1kW/8.2hp; Output: 3.1kW/4.2hp</td>
+                            </tr>
+                            <tr>
+                              <td>Brake</td>
+                              <td>Patented ratchet</td>
+                            </tr>
+                            <tr>
+                              <td>Geartrain</td>
+                              <td>3-stage planetary steel gear</td>
+                            </tr>
+                            <tr>
+                              <td>Gear reduction ratio</td>
+                              <td>450:1</td>
+                            </tr>
+                            <tr>
+                              <td>Waterproof</td>
+                              <td>IP67</td>
+                            </tr>
+                            <tr>
+                              <td>Cable (Dia&times;L)</td>
+                              <td>&Oslash;7/13" &times; 87' (&Oslash;13.8mm &times; 26.5m)</td>
+                            </tr>
+                            <tr>
+                              <td>Drum size (Dia&times;L)</td>
+                              <td>&Oslash;4.72" &times; 7.8" (&Oslash;128mm &times; 198mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Mounting bolt pattern</td>
+                              <td>10" &times; 4.5" (254mm &times; 114.3mm)<br>10" &times; 7.5" (254mm &times; 199.5mm)</td>
+                            </tr>
+                            <tr>
+                              <td>Net weight</td>
+                              <td>219.4 lbs / 99.5 kgs</td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div class="col-md-7">
+                          <h6 class="winch-ds-h6">24V DC Performance Specs (first layer)</h6>
+                        <div class="table-responsive">
+                          <table class="table winch-ds-perf-table">
+                            <thead>
+                              <tr>
+                                <th>Line Pull<br>lbs (kg)</th>
+                                <th>Line Speed<br>ft/min (m/min)</th>
+                                <th>Motor Current</th>
+                                <th>Pull by Layer<br>layer / lbs (kg)</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>0</td>
+                                <td>30.3 (9.2)</td>
+                                <td>23 amps</td>
+                                <td>1 / 25000 (11340)</td>
+                              </tr>
+                              <tr>
+                                <td>5000 (2266)</td>
+                                <td>11.1 (3.4)</td>
+                                <td>90 amps</td>
+                                <td>2 / 20724 (9460)</td>
+                              </tr>
+                              <tr>
+                                <td>10000 (4536)</td>
+                                <td>8.2 (2.5)</td>
+                                <td>140 amps</td>
+                                <td>3 / 17698 (8027)</td>
+                              </tr>
+                              <tr>
+                                <td>15000 (6804)</td>
+                                <td>6.6 (2.0)</td>
+                                <td>180 amps</td>
+                                <td>4 / 15444 (7005)</td>
+                              </tr>
+                              <tr>
+                                <td>20000 (9072)</td>
+                                <td>5.2 (1.6)</td>
+                                <td>230 amps</td>
+                                <td>&mdash;</td>
+                              </tr>
+                              <tr>
+                                <td>25000 (11340)</td>
+                                <td>4.0 (1.2)</td>
+                                <td>280 amps</td>
+                                <td>&mdash;</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
