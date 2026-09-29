@@ -175,10 +175,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="row">
 
               <!-- Popular Images Slider -->
-              <div class="col-md-7">
+              <div class="col-md-5 col-sm-6">
 
                 <!-- Images Slider -->
-                <div class="images-slider">
+                <div class="images-slider product-detail-image-box">
                   <ul class="slides">
                     <li data-thumb="images/large-img-1.jpg"> <img class="img-responsive" src="images/large-img-1.jpg"
                         alt=""> </li>
@@ -190,33 +190,53 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
 
-              <!-- COntent -->
-              <div class="col-md-5">
-                <h4>Wood Chair</h4>
+              <!-- Content -->
+              <div class="col-md-7 col-sm-6">
+                <h4 id="product-detail-name">Product Name</h4>
 
                 <!-- Sale Tags -->
                 <ul class="item-owner">
                   <li>Brand:<span> Europull</span></li>
-                  <li>Category:<span> Lifting Equipment</span></li>
+                  <li>Category:<span id="product-detail-category"> Lifting Equipment</span></li>
                 </ul>
 
                 <!-- Item Detail -->
-                <p>High-quality wood chair designed for comfort and durability. Perfect for industrial or office use.
+                <p id="product-detail-desc" style="font-size: 14px; line-height: 24px; color: #555; margin-bottom: 20px;">
+                  High quality lifting and material handling equipment engineered to international standards.
                 </p>
+
+                <!-- Quick Technical Specs Table (Euroweld / Toyolift inspired) -->
+                <div class="europull-quick-specs">
+                  <div class="table-responsive">
+                    <table class="table europull-spec-table">
+                      <thead>
+                        <tr>
+                          <th>Parameter</th>
+                          <th>Specification / Compliance</th>
+                          <th>Available Ranges</th>
+                        </tr>
+                      </thead>
+                      <tbody id="product-parameters-body">
+                        <!-- Injected dynamically by product-detail.js -->
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
 
                 <!-- Short By -->
                 <div class="some-info">
-                  <ul class="row margin-top-30">
+                  <ul class="row margin-top-25">
 
                     <!-- REQUEST COMPONENT -->
-                    <li class="col-xs-12"> <a href="#" class="btn btn-main add-to-quote" data-id="wood-chair"
-                        data-name="Wood Chair" data-image="images/large-img-1.jpg" data-url="product-detail_01.html">ADD
+                    <li class="col-xs-12"> <a href="#" class="btn btn-main add-to-quote btn-block" data-id=""
+                        data-name="" data-image="" data-url=""
+                        style="height: 48px; line-height: 46px; text-align: center; font-size: 14px; letter-spacing: 2px;"><i class="fa fa-shopping-basket" style="margin-right: 8px;"></i> ADD
                         TO QUOTE</a> </li>
 
                     <!-- LIKE -->
                     <li class="col-xs-12 margin-top-20">
                       <p><i class="icon-envelope margin-right-10"></i> Email us for more info:
-                        <strong>INFO@EUROPULL.COM</strong>
+                        <strong><a href="mailto:INFO@EUROPULL.COM" style="color: #2d3a4b;">INFO@EUROPULL.COM</a></strong>
                       </p>
                     </li>
                   </ul>
@@ -225,8 +245,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <div class="inner-info">
                     <h6>DOWNLOAD RESOURCES</h6>
                     <p><a href="pdf/europull.pdf" class="btn btn-small btn-round" target="_blank"
-                        style="background: #2d3a4b; color: #fff; padding: 10px 20px;"><i class="fa fa-file-pdf-o"
-                          style="margin-right: 8px;"></i> Product Catalog.pdf</a></p>
+                        style="background: #2d3a4b; color: #fff; padding: 10px 22px; font-size: 12px; letter-spacing: 1px;"><i class="fa fa-file-pdf-o"
+                          style="margin-right: 8px; color: #ffe115;"></i> Official Product Catalog.pdf</a></p>
 
                     <h6>SHARE THIS PRODUCT</h6>
 
@@ -244,107 +264,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
 
-          <!--======= PRODUCT DESCRIPTION =========-->
+          <!--======= PRODUCT DESCRIPTION & DETAILED TABLES =========-->
           <div class="item-decribe">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs animate fadeInUp" data-wow-delay="0.4s" role="tablist">
-              <li role="presentation" class="active"><a href="#descr" role="tab" data-toggle="tab">DESCRIPTION</a></li>
-              <!-- <li role="presentation"><a href="#review" role="tab" data-toggle="tab">REVIEW (03)</a></li> -->
-              <li role="presentation"><a href="#tags" role="tab" data-toggle="tab">INFORMATION</a></li>
+              <li role="presentation" class="active"><a href="#tab-specs" role="tab" data-toggle="tab"><i class="fa fa-table" style="margin-right: 6px;"></i> CAPACITY &amp; MODEL SPECIFICATIONS</a></li>
+              <li role="presentation"><a href="#tab-features" role="tab" data-toggle="tab"><i class="fa fa-cogs" style="margin-right: 6px;"></i> KEY FEATURES &amp; ADVANTAGES</a></li>
+              <li role="presentation"><a href="#tab-standards" role="tab" data-toggle="tab"><i class="fa fa-shield" style="margin-right: 6px;"></i> STANDARDS &amp; COMPLIANCE</a></li>
+              <li role="presentation"><a href="#tab-description" role="tab" data-toggle="tab"><i class="fa fa-file-text-o" style="margin-right: 6px;"></i> OVERVIEW &amp; DESCRIPTION</a></li>
             </ul>
 
             <!-- Tab panes -->
             <div class="tab-content animate fadeInUp" data-wow-delay="0.4s">
-              <!-- DESCRIPTION -->
-              <div role="tabpanel" class="tab-pane fade in active" id="descr">
-                <p>Product details loading...</p>
-                <h6>THE SIMPLE FACTS</h6>
-                <ul>
-                  <li>
-                    <p>Praesent faucibus, leo vitae maximus dictum,</p>
-                  </li>
-                  <li>
-                    <p> Donec porta ut lectus </p>
-                  </li>
-                  <li>
-                    <p> Phasellus maximus velit id nisl</p>
-                  </li>
-                  <li>
-                    <p> Quisque a tellus et sapien aliquam sus</p>
-                  </li>
-                  <li>
-                    <p> Donec porta ut lectus </p>
-                  </li>
-                  <li>
-                    <p> Phasellus maximus velit id nisl</p>
-                  </li>
-                </ul>
+              <!-- TAB 1: MODEL & CAPACITY SPECIFICATIONS TABLE -->
+              <div role="tabpanel" class="tab-pane fade in active" id="tab-specs">
+                <div id="product-tech-table-container">
+                  <!-- Dynamically populated from productsData -->
+                </div>
               </div>
 
-              <!-- REVIEW -->
-              <!--
-              <div role="tabpanel" class="tab-pane fade" id="review">
-                <h6>3 REVIEWS FOR SHIP YOUR IDEA</h6>
-
-                <div class="media">
-                  <div class="media-left">
-                    <div class="avatar"> <a href="#"> <img class="media-object" src="images/avatar-1.jpg" alt=""> </a>
-                    </div>
-                  </div>
-                  <div class="media-body">
-                    <p class="font-playfair">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut
-                      labore et dolore magna aliqua.”</p>
-                    <h6>TYRION LANNISTER <span class="pull-right">MAY 10, 2016</span> </h6>
-                  </div>
+              <!-- TAB 2: KEY FEATURES & ADVANTAGES -->
+              <div role="tabpanel" class="tab-pane fade" id="tab-features">
+                <div id="product-features-container">
+                  <!-- Dynamically populated feature cards -->
                 </div>
-
-                <div class="media">
-                  <div class="media-left">
-                    <div class="avatar"> <a href="#"> <img class="media-object" src="images/avatar-2.jpg" alt=""> </a>
-                    </div>
-                  </div>
-                  <div class="media-body">
-                    <p class="font-playfair">“Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                      tempor incididunt ut
-                      labore et dolore magna aliqua.”</p>
-                    <h6>TYRION LANNISTER <span class="pull-right">MAY 10, 2016</span> </h6>
-                  </div>
-                </div>
-
-                <h6 class="margin-t-40">ADD REVIEW</h6>
-                <form>
-                  <ul class="row">
-                    <li class="col-sm-6">
-                      <label> *NAME
-                        <input type="text" value="" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-6">
-                      <label> *EMAIL
-                        <input type="email" value="" placeholder="">
-                      </label>
-                    </li>
-                    <li class="col-sm-12">
-                      <label> *YOUR REVIEW
-                        <textarea></textarea>
-                      </label>
-                    </li>
-                    <li class="col-sm-6">
-                      <div class="stars"> <span>YOUR RATING</span> <i class="fa fa-star"></i><i
-                          class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
-                          class="fa fa-star"></i></div>
-                    </li>
-                    <li class="col-sm-6">
-                      <button type="submit" class="btn btn-dark btn-small pull-right no-margin">POST REVIEW</button>
-                    </li>
-                  </ul>
-                </form>
               </div>
-              -->
 
-              <!-- TAGS -->
-              <div role="tabpanel" class="tab-pane fade" id="tags"> </div>
+              <!-- TAB 3: STANDARDS & COMPLIANCE -->
+              <div role="tabpanel" class="tab-pane fade" id="tab-standards">
+                <div id="product-standards-container">
+                  <!-- Dynamically populated compliance info -->
+                </div>
+              </div>
+
+              <!-- TAB 4: OVERVIEW & DESCRIPTION -->
+              <div role="tabpanel" class="tab-pane fade" id="tab-description">
+                <div id="product-description-container">
+                  <!-- Dynamically populated overview -->
+                </div>
+              </div>
             </div>
           </div>
         </div>

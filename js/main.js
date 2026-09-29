@@ -283,6 +283,39 @@ $(document).ready(function ($) {
 		});
 	});
 
+	/*-----------------------------------------------------------------------------------*/
+	/* 		Make Entire Product Card Clickable
+	/*-----------------------------------------------------------------------------------*/
+	$(document).on('click auxclick', '.papular-block .item, .arrival-block .item, .item[data-url]', function (e) {
+		// Only respond to left click (0 or 1) and middle click (2)
+		if (e.which > 2) return;
+
+		// Don't navigate if user clicked actionable buttons/interactive controls:
+		// 1. Add to quote buttons
+		// 2. Lightbox magnifier / image zoom
+		// 3. Other buttons
+		if ($(e.target).closest('.add-to-quote, [data-lighter], .btn, button').length > 0) {
+			return;
+		}
+
+		// Find target product detail URL
+		var targetUrl = $(this).attr('data-url') || $(this).find('.item-name a').attr('href');
+		if (targetUrl && targetUrl !== '#' && targetUrl !== '#.') {
+			// If user clicked directly on a link tag with this same targetUrl, let the browser handle it naturally
+			var $clickedLink = $(e.target).closest('a');
+			if ($clickedLink.length > 0 && $clickedLink.attr('href') === targetUrl && (e.which === 1 || !e.which) && !e.ctrlKey && !e.metaKey) {
+				return;
+			}
+
+			// Open in new tab if Ctrl/Cmd is held or middle click was used
+			if (e.ctrlKey || e.metaKey || e.which === 2) {
+				window.open(targetUrl, '_blank');
+			} else if (e.which === 1 || !e.which) {
+				window.location.href = targetUrl;
+			}
+		}
+	});
+
 });
 
 /* Saudi Landing Page FAQ Toggle */

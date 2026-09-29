@@ -1852,12 +1852,27 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	flex-direction: column;
 }
 
-/* Ensure items take full height */
-.papular-block .item {
+/* Ensure items take full height and are clickable */
+.papular-block .item,
+.arrival-block .item,
+.item[data-url] {
 	width: 100%;
 	height: 100%;
 	margin-bottom: 30px;
 	/* Ensure spacing between rows */
+	cursor: pointer;
+}
+
+.papular-block .item-img,
+.papular-block .overlay,
+.papular-block .item-name,
+.papular-block .item-name p,
+.arrival-block .item,
+.arrival-block .item-img,
+.arrival-block .overlay,
+.arrival-block .item-name,
+.arrival-block .item-name p {
+	cursor: pointer;
 }
 
 .papular-block .item-img {
@@ -2019,7 +2034,10 @@ header .is-sticky .sticky .user-basket .dropdown-menu {
 	text-transform: uppercase;
 }
 
-.papular-block .item-name a:hover {
+.papular-block .item-name a:hover,
+.papular-block .item:hover .item-name a,
+.arrival-block .item:hover .item-name a,
+.item[data-url]:hover .item-name a {
 	color: #ffe115;
 }
 
@@ -5932,5 +5950,254 @@ main {
     margin-right: 10px;
 }
 
+/* ========================================================
+   EUROPULL SPECIFICATION & ENGINEERING TABLES
+   ======================================================== */
+.product-detail-image-box {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    text-align: center;
+}
 
+.product-detail-image-box img {
+    margin: 0 auto;
+    max-height: 460px;
+    object-fit: contain;
+}
 
+.europull-quick-specs {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.europull-spec-table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.europull-spec-table thead tr th {
+    background: #dbeafe !important; /* Gentle light blue as requested in reference */
+    color: #1e3a8a !important;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    padding: 12px 14px;
+    border: none !important;
+    border-bottom: 2px solid #bfdbfe !important;
+}
+
+.europull-spec-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.europull-spec-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.europull-spec-table tbody tr:hover {
+    background-color: #eff6ff;
+}
+
+.europull-spec-table tbody td {
+    padding: 10px 14px;
+    font-size: 13px;
+    line-height: 1.5;
+    border-top: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+.europull-spec-table td.spec-param {
+    font-weight: 700;
+    color: #2d3a4b;
+    width: 32%;
+}
+
+.europull-spec-table td.spec-val {
+    color: #475569;
+    font-weight: 500;
+    width: 43%;
+}
+
+.europull-spec-table td.spec-range {
+    color: #0369a1;
+    font-weight: 600;
+    font-size: 12px;
+    width: 25%;
+}
+
+/* Full Engineering Specifications Table (Lower Tab - Toyolift / Europull PDF Style) */
+.europull-tech-table-wrapper {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.europull-tech-table-title {
+    background: #2d3a4b;
+    color: #ffffff;
+    padding: 12px 18px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.europull-tech-table-title span.badge-std {
+    background: #ffe115;
+    color: #2d3a4b;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.europull-tech-table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.europull-tech-table thead tr th {
+    background: #f1f5f9;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 12px 14px;
+    border-bottom: 2px solid #cbd5e1;
+    white-space: nowrap;
+}
+
+.europull-tech-table tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+.europull-tech-table tbody tr:hover {
+    background-color: #fefce8;
+}
+
+.europull-tech-table tbody td {
+    padding: 11px 14px;
+    font-size: 13px;
+    color: #334155;
+    border-top: 1px solid #edf2f7;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.europull-tech-table td strong.model-badge {
+    color: #2d3a4b;
+    background: #e2e8f0;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+/* Features Grid */
+.europull-features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.europull-feature-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2d3a4b;
+    border-radius: 6px;
+    padding: 18px 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.europull-feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border-left-color: #ffe115;
+}
+
+.europull-feature-card h6 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #2d3a4b;
+    margin: 0 0 8px 0;
+    display: flex;
+    align-items: center;
+}
+
+.europull-feature-card h6 i {
+    color: #ffe115;
+    background: #2d3a4b;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 11px;
+}
+
+.europull-feature-card p {
+    font-size: 13px;
+    line-height: 22px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* Standards Badges Grid */
+.europull-standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.europull-standard-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.europull-standard-item .std-icon {
+    font-size: 22px;
+    color: #16a34a;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+
+.europull-standard-item h6 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.europull-standard-item p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 18px;
+    color: #64748b;
+}

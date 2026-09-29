@@ -870,6 +870,7 @@ var QuoteCart = (function ($) {
         // Add to Quote Click (Global delegate)
         $(document).on('click', '.add-to-quote', function (e) {
             e.preventDefault();
+            e.stopPropagation();
             var $btn = $(this);
             var product = {
                 id: $btn.attr('data-id'),

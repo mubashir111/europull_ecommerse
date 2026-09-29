@@ -70,7 +70,7 @@ $(document).ready(function () {
 
                 var itemHtml = `
                 <div class="col-md-3 col-sm-6">
-                    <div class="item">
+                    <div class="item" data-url="product-detail_01.html?id=${p.id}">
                         <div class="item-img"> 
                             <img class="img-1" src="${img}" alt="${p.name}"> 
                             <img class="img-2" src="${img}" alt="${p.name}">
