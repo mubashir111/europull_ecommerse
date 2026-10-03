@@ -7,8 +7,7 @@
 var QuoteCart = (function ($) {
     "use strict";
 
-    var REQUEST_QUOTE_URL = 'https://onshore.tbo365.cloud/api/method/onshore.api.create_request_quote';
-    var REQUEST_QUOTE_AUTH = 'token9897e6ee3838b6c:06d7193075244d6';
+    var REQUEST_QUOTE_URL = 'https://onshore.tbocloud.in/api/method/onshore.api.create_request_quote';
     var STORAGE_KEY = 'europull_quote_cart';
     var cart = [];
 
@@ -779,9 +778,6 @@ var QuoteCart = (function ($) {
                 url: REQUEST_QUOTE_URL,
                 method: 'POST',
                 contentType: 'application/json',
-                headers: {
-                    Authorization: REQUEST_QUOTE_AUTH
-                },
                 data: JSON.stringify(payload),
                 success: function (response) {
                     $('#quoteRequestModal').modal('hide');

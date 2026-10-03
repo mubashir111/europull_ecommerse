@@ -1,3 +1,6 @@
+// ERP that serves the blog posts (public endpoints, no API key needed).
+const ERP_URL = 'https://onshore.tbocloud.in';
+
 document.addEventListener('DOMContentLoaded', function() {
     const isBlogDetail = document.getElementById('blog-detail-container') !== null;
     const isBlogList = document.getElementById('blog-container') !== null;
@@ -12,9 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchBlogs() {
-    fetch('https://onshore.tbo365.cloud/api/method/onshore.api.get_blogs?website=EUROPULL', {
-        headers: { 'Authorization': 'token9897e6ee3838b6c:06d7193075244d6' }
-    })
+    fetch(`${ERP_URL}/api/method/onshore.api.get_blogs?website=EUROPULL`)
     .then(response => response.json())
     .then(data => {
         if(data.message && data.message.success && data.message.blogs) {
@@ -38,9 +39,7 @@ function fetchBlogDetail() {
         return;
     }
 
-    fetch('https://onshore.tbo365.cloud/api/method/onshore.api.get_blog_detail?route=' + encodeURIComponent(route), {
-        headers: { 'Authorization': 'token9897e6ee3838b6c:06d7193075244d6' }
-    })
+    fetch(`${ERP_URL}/api/method/onshore.api.get_blog_detail?route=` + encodeURIComponent(route))
     .then(response => response.json())
     .then(data => {
         if (data.message && data.message.success && data.message.blog) {
@@ -72,7 +71,7 @@ function renderBlogs(blogs) {
 
     let html = '';
     blogs.forEach(b => {
-        const img = b.meta_image ? `https://onshore.tbo365.cloud${b.meta_image}` : 'images/blog-default.jpg';
+        const img = b.meta_image ? `${ERP_URL}${b.meta_image}` : 'images/blog-default.jpg';
         const intro = b.blog_intro ? b.blog_intro.substring(0, 120) + '...' : '';
         
         // Using Europull's typical grid structure for a product/post (e.g. col-md-4)
@@ -101,7 +100,7 @@ function renderBlogDetail(blog) {
     const container = document.getElementById('blog-detail-container');
     if (!container) return;
 
-    const img = blog.meta_image ? `https://onshore.tbo365.cloud${blog.meta_image}` : 'images/blog-default.jpg';
+    const img = blog.meta_image ? `${ERP_URL}${blog.meta_image}` : 'images/blog-default.jpg';
     
     // Update page title
     document.title = blog.title + ' | Europull Blog';
